@@ -19,14 +19,20 @@
 
 body
 {
-	background: url("../img/clouds.png") bottom;
+	background: url("../img/clouds.jpg") bottom;
 	background-attachment:fixed;
 	background-repeat: no-repeat;
 }
 
+#wrap
+{
+	width: 1220px;
+	margin: 0 auto;
+}
+
 #banner
 {
-	width: 1200px;
+	width: 1000px;
 	height: 340px;
 	margin: 0 auto;
 	background: url("../img/brown.png");
@@ -204,7 +210,7 @@ body
 #footer
 {
 	max-width: 100%;
-	min-width: 1200px;
+	min-width: 1220px;
 	height: 180px;
 	background: url("../img/black.png");
 	border-top: 4px solid #666;
