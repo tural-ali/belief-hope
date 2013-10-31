@@ -17,30 +17,25 @@
 	src: url("../fonts/Comfortaa/Comfortaa-Regular.ttf");
 }
 
-html
+body
 {
-	background: url("../img/buta.jpg");
-}
-
-#hline
-{
-	max-width: 100%;
-	min-width: 1000px;
-	height: 10px;
-	background: #171717;
-	z-index: 0;
+	background: url("../img/clouds.png") bottom;
+	background-attachment:fixed;
+	background-repeat: no-repeat;
 }
 
 #banner
 {
-	max-width: 100%;
-	min-width: 1000px;
-	height: 440px;
+	width: 1000px;
+	height: 340px;
+	margin: 0 auto;
+	background: url("../img/brown.png");
+	padding: 10px;
 }
 
 #head-con
 {
-	position: absolute;
+	position: relative;
 	top: 10px;
 	width: 100%;
 	z-index: 100;
@@ -48,19 +43,18 @@ html
 
 #header
 {
-	min-width: 1000px;
-	height: 148px;
-	background: url("../img/top-menu.png");
-	width: 1000px;
+	height: 200px;
+	width: 1200px;
 	margin: 0 auto;
 	margin-top: 20px;
 }
 
-#menu-con
+#back-con
 {
-	width: 800px;
-	padding: 28px;
+	width: 940px;
 	margin: 0 auto;
+	padding-top: 8px;
+	background: url("../img/white2.png");
 }
 
 #container
@@ -78,8 +72,12 @@ html
 #header-right
 {
 	float: right;
-	margin-top: 26px;
+	margin-top: 30px;
 	color: #fff;
+	width: 410px;
+	padding-top: 11px;
+	padding-bottom: 11px;
+	background: url("../img/white.png");
 	font-family: Calibrii;
 	line-height: 40px;
 	text-align: center;
@@ -94,7 +92,7 @@ html
 #header-right ul li
 {
 	display: inline-block;
-	background: #171717;
+	background: #005caf;
 }
 
 #header-right ul li:hover
@@ -133,7 +131,6 @@ html
 #left-con
 {
 	margin-top: 38px;
-	margin-left: 15px;
 }
 
 #left-con ul
@@ -162,9 +159,7 @@ html
 	width: 110px;
 	margin-top: 5px;
 	line-height: 33px;
-	padding-left: 20px;
-	padding-right: 10px;
-	border-bottom: 1px solid #eee;
+	padding-left: 30px;
 }
 
 #left-con ul li:hover a
@@ -177,14 +172,13 @@ html
 {
 	color: #fff;
 	color: #fff;
-	width: 166px;
+	width: 176px;
 	height: 51px;
 	cursor: auto;
 	border: 0px;
 	line-height: 51px;
 	text-align: center;
-	margin-left: -40px;
-	padding-left: 30px;
+	padding-left: 10px;
 	background: url(../img/lm.png) no-repeat;
 }
 
@@ -194,32 +188,32 @@ html
 	width: 720px;
 	font-family: Calibrii;
 	font-size: 16px;
-	color: #333;
+	color: #111;
 	margin-bottom: 20px;
 	margin-top: 20px;
-	border-left: 2px solid #ededed;
 }
 
 #right-con h1
 {
 	font-size: 50px;
 	font-weight: normal;
-	color: #333;
+	color: #555;
+	text-shadow: -1px 1px 5px #777;
 }
 
 #footer
 {
 	max-width: 100%;
-	min-width: 1000px;
+	min-width: 1200px;
 	height: 180px;
-	background: #171717;
+	background: url("../img/black.png");
 	border-top: 4px solid #666;
 	text-align: center;
 }
 
 #footer p
 {
-	color: #555;
+	color: #ddd;
 	font-family: Calibrii;
 }
 
@@ -231,13 +225,13 @@ html
 
 #footer a
 {
-	color: #555;
+	color: #ddd;
 	text-decoration: none;
 }
 
 #footer a:hover
 {
-	color: #666;
+	color: #eee;
 }
 
 #ftlogo
@@ -257,14 +251,14 @@ html
 
 .sli-con
 {
-	float: right;
+	float: left;
 	font-family: Slider;
 	text-shadow: 0 3px 4px rgba(0, 0, 0, 0.6);
 	background: url("../img/sli-div.png");
 	padding: 15px;
 	position: relative;
-	margin-top: 280px;
-	margin-right: 21px;
+	margin-top: 90px;
+	margin-left: 90px;
 }
 
 .sli-con h1
@@ -327,14 +321,14 @@ body,
 }
 
 .item:nth-child(1) {
-  background: url("../img/slide1.jpg");
+  background: url("../img/slide1.jpg") right;
 }
 
 .item:nth-child(2) {
-  background: url("../img/slide2.jpg");
+  background: url("../img/slide2.jpg") right;
 }
 
 .item:nth-child(3) {
-  background: url("../img/slide3.jpg");
+  background: url("../img/slide3.jpg") right;
 }
 
