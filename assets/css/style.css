@@ -26,7 +26,7 @@ body
 
 #wrap
 {
-	width: 1220px;
+	width: 1300px;
 	margin: 0 auto;
 }
 
@@ -50,7 +50,7 @@ body
 #header
 {
 	height: 200px;
-	width: 1200px;
+	width: 1280px;
 	margin: 0 auto;
 	margin-top: 20px;
 }
@@ -73,6 +73,35 @@ body
 #logo
 {
 	float: left;
+}
+
+#lang
+{
+	position: relative;
+	top: -40px;
+	left: 130px;
+	color: #ff6600;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+#lang a
+{
+	color: #fff;
+	font-size: 16px;
+	font-family: Calibrii;
+	text-decoration: none;
+	font-weight: normal;
+}
+
+#lang a.active
+{
+	font-weight: bold;
+}
+
+#lang a:hover
+{
+	color: #eee;
 }
 
 #header-right
@@ -149,14 +178,9 @@ body
 
 #left-con ul a
 {
-	color: #777;
+	color: #666;
 	text-decoration: none;
 	padding: 5px;
-}
-
-#left-con ul a:hover
-{
-	color: #fff;
 }
 
 #left-con ul li
@@ -199,18 +223,118 @@ body
 	margin-top: 20px;
 }
 
-#right-con h1
+.context
 {
-	font-size: 50px;
+	margin-bottom: 30px;
+	padding-bottom: 20px;
+	margin-top: 30px;
+	width: 660px;
+	background: url(../img/line.png) bottom no-repeat;
+}
+
+.context:nth-child(4)
+{
+	background: none;
+}
+
+.con-left
+{
+	float: left;
+	margin-bottom: 20px;
+}
+
+.con-left h1
+{
+	font-size: 30px;
+	font-weight: normal;
+	margin-left: -3px;
+	color: #333;
+}
+
+.con-left h5
+{
+	font-size: 14px;
 	font-weight: normal;
 	color: #555;
-	text-shadow: -1px 1px 5px #777;
+}
+
+.con-right h5
+{
+
+	margin-top: 13px;
+	float: right;
+	font-size: 16px;
+	font-weight: normal;
+	color: #555;
+}
+
+.con-right span
+{
+	color: #111;
+}
+
+.con-right i
+{
+	color: #444;
+	font-size: 13px;
+}
+
+.con-body
+{
+	float: right;
+	width: 430px;
+}
+
+.con-img
+{
+	float: left;
+}
+
+.con-img img
+{
+	width: 200px;
+	padding: 5px;
+	border: 1px solid #888;
+	margin-top: 4px;
+	border-radius: 5px;
+}
+
+.con-fleft
+{
+	float: left;
+	color: #666;
+	margin-left: 10px;
+}
+
+.con-fleft i
+{
+	font-size: 14px;
+}
+
+.con-fright
+{
+	float: right;
+	margin-bottom: 20px;
+	margin-right: 10px;
+}
+
+.con-fright a
+{
+	color: #fd6603;
+	text-decoration: none;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.con-fright a:hover
+{
+	color: #111;
 }
 
 #footer
 {
 	max-width: 100%;
-	min-width: 1220px;
+	min-width: 1300px;
 	height: 180px;
 	background: url("../img/black.png");
 	border-top: 4px solid #666;
