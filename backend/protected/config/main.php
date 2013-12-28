@@ -71,7 +71,7 @@ return array(
             'connectionString' => 'mysql:host=localhost;dbname=beliefandhope',
             'emulatePrepare' => true,
             'username' => 'bh',
-            'password' => 'bh0579',
+            'password' => 'pUaHAkLLuo',
             'charset' => 'utf8',
             'initSQLs' => array("set time_zone='+05:00';")
         ),
