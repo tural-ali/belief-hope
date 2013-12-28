@@ -1,0 +1,21 @@
+.zone-colors {
+    width: 250px;
+    height: 250px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+}
+
+.gradPreview {
+    float: left;
+    margin: 5px;
+    cursor: pointer;
+    border: 2px solid #eee;
+}
+
+.gradPreview:hover, .gradPreview.active {
+    border: 2px solid #333;
+}

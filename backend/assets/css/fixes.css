@@ -1,0 +1,43 @@
+.grid-view .filters input, .grid-view .filters select {
+    width: 90%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Arial;
+}
+
+.button-column a {
+    font-size: 18px;
+
+    text-decoration: none;
+}
+
+.button-column .icon-remove-sign, .button-column .icon-pencil {
+    cursor: pointer;
+}
+
+.button-column .icon-remove-sign:hover {
+    color: red
+}
+
+.button-column .icon-pencil:hover {
+    color: #3cc051;
+}
+
+/*Table arrow */
+
+.sort-link.asc {
+    background: url(../img/up.gif) right center no-repeat;
+    padding-right: 10px;
+}
+
+.sort-link.desc {
+    background: url(../img/down.gif) right center no-repeat;
+    padding-right: 10px;
+}
+
+.buttons {
+    margin: 20px 0;
+    overflow: auto;
+}
+
