@@ -2,14 +2,14 @@
 <?php $this->beginContent('//layouts/main'); ?>
 
 
-    <div id="back-con">
-        <div id="container">
-            <div class="margin">
-                <?= $content ?>
 
-            </div>
-        </div>
-        <div class="clear"></div>
+    <div id="container" class="white-trans-border">
+
+        <?= $content ?>
+
+
     </div>
+
+
 
 <?php $this->endContent(); ?>

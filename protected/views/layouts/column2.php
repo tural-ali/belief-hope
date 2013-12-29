@@ -53,8 +53,8 @@
         <!-- Carousel End -->
     </div>
 
-    <div id="back-con">
-        <div id="container">
+
+        <div id="container" class="white-trans-border">
             <div id="left-con">
                 <ul>
                     <li>Bolmeler</li>
@@ -66,12 +66,12 @@
                 </ul>
             </div>
             <div id="right-con">
-                <div class="margin">
-                    <?= $content ?>
 
-                </div>
+                <?= $content ?>
+
+
             </div>
-            <div class="clear"></div>
+
         </div>
-    </div>
+
 <?php $this->endContent(); ?>

@@ -1,18 +1,43 @@
+<?
+$controllerName = Yii::app()->controller->id;
+$actionName = Yii::app()->controller->action->id;
+?>
 <!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <link href="/min/?g=<?php echo Yii::app()->controller->id . "_" . Yii::app()->controller->action->id; ?>_css"
-          rel="stylesheet">
+    <link href="/min/?g=<?= $controllerName ?>_<?= $actionName ?>_css" rel="stylesheet">
+    <?
+    if (!isset($_SESSION)) {
+        session_start();
+        if (!isset($_SESSION["introShown"])) {
+            echo "<link href='/assets/intro.css'  rel='stylesheet'>";
+            $_SESSION["introShown"] = true;
+        }
+
+    }
+    ?>
     <title>Belief & Hope</title>
 </head>
 <body>
 
-<div id="fade">
-    <div class="clouds"></div>
-    <img src="/assets/img/logo-larg.png"/>
-</div>
+
+<?
+if (!isset($_SESSION)) {
+    session_start();
+    if (!isset($_SESSION["introShown"])) {
+        ?>
+        <div id="fade">
+            <div class="clouds"></div>
+            <img src="/assets/img/logo-larg.png"/>
+        </div>
+    <?
+    }
+}
+?>
+
+
 
 <div id="wrap">
     <div id="head-con">
@@ -32,12 +57,8 @@
         </div>
     </div>
     <?= $content ?>
-
+    <div class="push"></div>
 </div>
-
-
-
-
 
 
 <div id="footer">
@@ -52,8 +73,17 @@
 </div>
 
 
-<script src="/min/?g=<?php echo Yii::app()->controller->id . "_" . Yii::app()->controller->action->id; ?>_js"></script>
+<script src="/min/?g=<?= $controllerName ?>_<?= $actionName ?>_js"></script>
+<?
+if (!isset($_SESSION)) {
+    session_start();
+    if (!isset($_SESSION["introShown"])) {
+        echo "<script src='/assets/js/intro.js'></script>";
+        $_SESSION["introShown"] = true;
+    }
 
+}
+?>
 </body>
 </html>
 

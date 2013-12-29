@@ -58,8 +58,8 @@ return array(
             'showScriptName' => false,
             'caseSensitive' => false,
             'rules' => array(
-                '<language:(az|ru|en)>/' => 'site/index',
                 '<language:(az|ru|en)>/<token:[\w\W]{0,}>' => 'site/<token>',
+                '<language:(az|ru|en)>/' => 'site/index',
                 '<language:(az|ru|en)>/<controller:\w+>/<id:\d+>' => '<controller>/view',
                 '<language:(az|ru|en)>/<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
                 '<language:(az|ru|en)>/<controller:\w+>/<action:\w+>/*' => '<controller>/<action>',
@@ -82,23 +82,24 @@ return array(
             // use 'site/error' action to display errors
             'errorAction' => 'dashboard/error',
         ),
+
         'log' => array(
             'class' => 'CLogRouter',
             'routes' => array(
                 array(
-                    'class' => 'CFileLogRoute',
-                    'levels' => 'error, warning',
+                    'class' => 'CWebLogRoute',
+                    'levels' => 'trace',
+                    'categories' => 'vardump',
+                    'showInFireBug' => true
                 ),
-                // uncomment the following to show log messages on web pages
-                /*
                 array(
-                    'class'=>'CWebLogRoute',
+                    'class' => 'CFileLogRoute',
+                    'levels' => 'error, warning'
                 ),
-                */
             ),
+
         ),
     ),
-
     // application-level parameters that can be accessed
     // using Yii::app()->params['paramName']
     'params' => array(

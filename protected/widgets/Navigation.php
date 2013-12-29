@@ -6,7 +6,9 @@ class Navigation extends CWidget
     public function run()
     {
         $currentLang = Yii::app()->language;
-        $token = (isset($_GET["token"])) ? $_GET["token"] : "home";
+        $temp = Yii::app()->controller->action->id;
+        $token = ($temp) ? $temp : "home";
+        Debug::fb($temp);
         $nav = $this->generateNav($token);
         $this->render('Navigation', array('currentLang' => $currentLang, 'html' => $nav));
     }
@@ -37,7 +39,10 @@ class Navigation extends CWidget
                     $html .= $this->generateNav($token, $result->id);
                     $html .= "</ul></li>";
                 } else {
-                    $html .= "<li data-url='/$currentLang/$result->token' class='menu-elem";
+                    $url = "/$currentLang/$result->token";
+                    if ($result->token == "home")
+                        $url = "/$currentLang/";
+                    $html .= "<li data-url='$url' class='menu-elem";
                     if ($token == $result->token)
                         $html .= " active ";
                     $html .= "'>";

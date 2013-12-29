@@ -1,4 +1,4 @@
-<h1>Contact Us</h1>
+<h1><?= Yii::t("common", "contact us") ?></h1>
 
 
 <div class="form">
@@ -15,8 +15,15 @@
 
 
     <?php echo $form->errorSummary($model); ?>
+
+    <?php
+    foreach (Yii::app()->user->getFlashes() as $key => $message) {
+        echo '<div class="flash-' . $key . '">' . $message . "</div>\n";
+    }
+    ?>
+
     <div class="form-group">
-        <?php echo $form->labelEx($model, 'fullname', array("class" => "col-sm-2 control-label")); ?>
+        <?php echo $form->labelEx($model, Yii::t("common", "fullname"), array("class" => "col-sm-2 control-label")); ?>
         <div class="col-sm-10">
             <?php echo $form->textField($model, 'fullname', array("class" => 'form-control')); ?>
         </div>
@@ -30,7 +37,7 @@
         <?php echo $form->error($model, 'email'); ?>
     </div>
     <div class="form-group">
-        <?php echo $form->labelEx($model, 'phone', array("class" => "col-sm-2 control-label")); ?>
+        <?php echo $form->labelEx($model, Yii::t("common", "phone"), array("class" => "col-sm-2 control-label")); ?>
         <div class="col-sm-10">
             <?php echo $form->textField($model, 'phone', array("class" => 'form-control')); ?>
         </div>
@@ -38,15 +45,17 @@
 
     </div>
     <div class="form-group">
-        <?php echo $form->labelEx($model, 'notes', array("class" => "col-sm-2 control-label")); ?>
+        <?php echo $form->labelEx($model, Yii::t("common", "message"), array("class" => "col-sm-2 control-label")); ?>
         <div class="col-sm-10">
             <?php echo $form->textArea($model, 'notes', array('rows' => 6, 'cols' => 50, "class" => 'form-control')); ?>
         </div>
         <?php echo $form->error($model, 'notes'); ?>
     </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
 
-    <div class="buttons">
-        <?php echo CHtml::submitButton(Yii::t("common", "send"), array('class' => 'btn btn-default')); ?>
+            <?php echo CHtml::submitButton(Yii::t("common", "send"), array('class' => 'btn btn-default')); ?>
+        </div>
     </div>
 
     <?php $this->endWidget(); ?>

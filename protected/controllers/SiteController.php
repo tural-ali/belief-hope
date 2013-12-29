@@ -27,9 +27,10 @@ class SiteController extends Controller
     public function actionContact()
     {
         $model = new Request();
-        if (isset($_POST['ContactForm'])) {
-            $model->attributes = $_POST['ContactForm'];
+        if (isset($_POST['Request'])) {
+            $model->attributes = $_POST['Request'];
             if ($model->save()) {
+                Yii::app()->user->setFlash('contact', Yii::t("common", "sent"));
                 $this->refresh();
             }
         }
