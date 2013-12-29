@@ -71,19 +71,6 @@ $css = array(
 
 $js = array(
 
-    "photo_create" => array(),
-    'menu_update' => array(
-        $pathJS["pages"] . "menu/update.js"
-    ),
-    'menu_create' => array(
-        $pathJS["pages"] . "menu/create.js"
-    ),
-    'place_update' => array(
-        $pathJS["pages"] . "place/update.js"
-    ),
-    'service_update' => array(
-        $pathJS["pages"] . "service/update.js"
-    ),
     'crud_admin' => array(
         $pathJS["root"] . "app.js",
         $pathJS["CRUD"] . "admin.js"
@@ -105,6 +92,13 @@ $js = array(
         $pathJS["CRUD"] . "create&update.js",
         $pathJS["CRUD"] . "chosen.js"
     ),
+
+
+    'slideshow_js' => array(
+        $pathJS["root"] . "app.js",
+        $pathJS["pages"] . "slideshow/create&update.js",
+    ),
+
 
     'dashboard_index' => array(
         $path["plug-ins"] . "flot/jquery.flot.js",
@@ -171,6 +165,15 @@ return array(
 
     'video_update_js' => array_merge($js["core_plugins"], $js["crud_update"]),
     'video_update_css' => array_merge($css["mandatory"], $css["fixes"]),
+
+    'slideshow_admin_js' => array_merge($js["core_plugins"], $js["crud_admin"]),
+    'slideshow_admin_css' => array_merge($css["mandatory"], $css["fixes"]),
+
+    'slideshow_create_js' => array_merge($js["core_plugins"], $js["slideshow_js"]),
+    'slideshow_create_css' => array_merge($css["mandatory"], $css["fixes"]),
+
+    'slideshow_update_js' => array_merge($js["core_plugins"], $js["slideshow_js"]),
+    'slideshow_update_css' => array_merge($css["mandatory"], $css["fixes"]),
 
     'request_admin_js' => array_merge($js["core_plugins"], $js["crud_admin"]),
     'request_admin_css' => array_merge($css["mandatory"], $css["fixes"]),

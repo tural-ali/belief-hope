@@ -148,13 +148,16 @@ class PhotoalbumController extends Controller
     }
 
 
-    /**
-     * Deletes a particular model.
-     * If deletion is successful, the browser will be redirected to the 'admin' page.
-     * @param integer $id the ID of the model to be deleted
-     */
     public function actionDelete($id)
     {
+        $criteria = new CDbCriteria();
+        $criteria->compare("albumID", $id);
+        $results = Photo::model()->findAll($criteria);
+        foreach ($results as $result) {
+            $filePath = dirname(__FILE__) . "/../../.." . $result->url;
+            if (file_exists($filePath)) unlink($filePath);
+            $result->delete();
+        }
         $this->loadModel($id)->delete();
 
         // if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
