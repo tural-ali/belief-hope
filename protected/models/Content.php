@@ -39,7 +39,7 @@ class Content extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('title_az, content_az', 'required'),
+			array('title_az, content_az, catID', 'required'),
 			array('isBlog', 'numerical', 'integerOnly'=>true),
 			array('title_az, title_en, title_ru, imgUrl', 'length', 'max'=>255),
 			array('catID', 'length', 'max'=>11),
@@ -81,11 +81,19 @@ class Content extends CActiveRecord
 			'videoID' => 'Video',
 			'isBlog' => 'Is Blog',
 			'imgUrl' => 'Şəkil',
-            "catName" => 'Kateqoriya'
+            "catName" => 'Kateqoriya',
+            'image' => 'Şəkil',
 		);
 	}
 
-
+    public function scopes()
+    {
+        return array(
+            'isBlog' => array(
+                'condition' => 'isBlog=1',
+            )
+        );
+    }
 
 	public function search()
 	{

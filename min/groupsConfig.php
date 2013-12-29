@@ -41,5 +41,7 @@ return array(
     'site_index_js' => array_merge($js["mandatory"], $js["site_index"]),
     'site_contact_css' => array_merge($css["mandatory"], $css["site_index"]),
     'site_contact_js' => array_merge($js["mandatory"], $js["site_index"]),
+    'content_view_css' => array_merge($css["mandatory"], $css["site_index"]),
+    'content_view_js' => array_merge($js["mandatory"], $js["site_index"]),
 
 );

@@ -38,5 +38,22 @@ class SiteController extends Controller
         $this->render('contact', array('model' => $model));
     }
 
+    public function actionThanks()
+    {
+        $this->redirect(Navigation::findUrlByID(array(
+            "id" => 2,
+            "lang" => Yii::app()->language
+        )));
+    }
+
+    public function actionAbout()
+    {
+        $this->redirect(Navigation::findUrlByID(array(
+            "id" => 1,
+            "lang" => Yii::app()->language
+        )));
+    }
+
+
 
 }
