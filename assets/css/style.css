@@ -1,8 +1,12 @@
 * {
-    margin: 0px;
-    padding: 0px;
-    border: 0px;
+    border: 0;
     outline: none;
+}
+
+html, body {
+    height: 100%;
+    padding: 0;
+    margin: 0
 }
 
 @font-face {
@@ -54,7 +58,10 @@ body {
 
 #wrap {
     width: 1300px;
-    margin: 0 auto;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -230px;
 }
 
 #banner {
@@ -375,7 +382,7 @@ body {
 #footer {
     max-width: 100%;
     min-width: 1300px;
-    height: 180px;
+    height: 220px;
     background: url("/assets/img/black.png");
     border-top: 4px solid #666;
     text-align: center;

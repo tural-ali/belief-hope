@@ -29,9 +29,8 @@ class Request extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('fullname, reqDate', 'required'),
+			array('fullname, reqDate, phone, notes', 'required'),
 			array('fullname, phone, email', 'length', 'max'=>255),
-			array('notes', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, fullname, reqDate, phone, email, notes', 'safe', 'on'=>'search'),
