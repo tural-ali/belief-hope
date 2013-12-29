@@ -4,10 +4,7 @@
 
     <?php $form = $this->beginWidget('CActiveForm', array(
         'id' => 'content-form',
-        // Please note: When you enable ajax validation, make sure the corresponding
-        // controller action is handling ajax validation correctly.
-        // There is a call to performAjaxValidation() commented in generated controller code.
-        // See class documentation of CActiveForm for details on this.
+        'htmlOptions' => array('enctype' => 'multipart/form-data'),
         'enableAjaxValidation' => false,
     )); ?>
 
@@ -27,8 +24,10 @@
             <li class="active"><a href="#tab1" data-toggle="tab">Az</a></li>
             <li class=""><a href="#tab2" data-toggle="tab">En</a></li>
             <li class=""><a href="#tab3" data-toggle="tab">Ru</a></li>
+            <li class=""><a href="#tab6" data-toggle="tab">Əsas Şəkil</a></li>
             <li class=""><a href="#tab4" data-toggle="tab">Foto-albom</a></li>
             <li class=""><a href="#tab5" data-toggle="tab">Video</a></li>
+
         </ul>
         <div class="tab-content">
             <div class="tab-pane active" id="tab1">
@@ -102,6 +101,14 @@
                     Yeni video
                     <i class="icon-plus"></i>
                 </button>
+
+
+            </div>
+            <div style="min-height: 124px;" class="tab-pane" id="tab6">
+
+                <?php echo $form->labelEx($model, 'image'); ?>
+                <?php echo $form->fileField($model, 'image'); ?>
+                <?php echo $form->error($model, 'image'); ?>
 
 
             </div>

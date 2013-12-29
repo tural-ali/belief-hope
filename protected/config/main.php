@@ -59,8 +59,8 @@ return array(
             'caseSensitive' => false,
             'rules' => array(
                 '<language:(az|ru|en)>/' => 'site/index',
+                '<language:(az|ru|en)>/<token:[\w\W]{0,}>' => 'site/<token>',
                 '<language:(az|ru|en)>/<controller:\w+>/<id:\d+>' => '<controller>/view',
-                '<language:(az|ru|en)>/page/<token:[\w\W]{0,}>' => 'page/viewpage',
                 '<language:(az|ru|en)>/<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
                 '<language:(az|ru|en)>/<controller:\w+>/<action:\w+>/*' => '<controller>/<action>',
             ),
@@ -70,7 +70,7 @@ return array(
             'connectionString' => 'mysql:host=localhost;dbname=beliefandhope',
             'emulatePrepare' => true,
             'username' => 'bh',
-            'password' => 'bh0579',
+            'password' => 'pUaHAkLLuo',
             'charset' => 'utf8',
             'initSQLs' => array("set time_zone='+05:00';")
         ),

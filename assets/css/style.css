@@ -2,22 +2,54 @@
     margin: 0px;
     padding: 0px;
     border: 0px;
+    outline: none;
 }
 
 @font-face {
     font-family: Calibrii;
-    src: url("../fonts/Calibrii/calibrii.woff");
+    src: url("/assets/fonts/Calibrii/calibrii.woff");
 }
 
 @font-face {
     font-family: Slider;
-    src: url("../fonts/Comfortaa/Comfortaa-Regular.ttf");
+    src: url("/assets/fonts/Comfortaa/Comfortaa-Regular.ttf");
 }
 
 body {
-    background: url("../img/clouds.jpg") bottom;
+    background: url("/assets/img/clouds.jpg") bottom;
     background-attachment: fixed;
     background-repeat: no-repeat;
+}
+
+#fade {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: #255580;
+    text-align: center;
+    z-index: 100;
+}
+
+#fade .clouds {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: url("/assets/img/full.png") center bottom;
+}
+
+#fade img {
+    display: none;
+    position: relative;
+    top: 50%;
+    margin-top: -150px;
+    z-index: 200;
+}
+
+#wrap, #footer {
+    display: none;
 }
 
 #wrap {
@@ -29,7 +61,7 @@ body {
     width: 1000px;
     height: 340px;
     margin: 0 auto;
-    background: url("../img/brown.png");
+    background: url("/assets/img/brown.png");
     padding: 10px;
 }
 
@@ -51,13 +83,13 @@ body {
     width: 940px;
     margin: 0 auto;
     padding-top: 8px;
-    background: url("../img/white2.png");
+    background: url("/assets/img/white2.png");
 }
 
 #container {
     width: 920px;
     margin: 0 auto;
-    background: url("../img/white.png");
+    background: url("/assets/img/white.png");
 }
 
 #logo {
@@ -93,11 +125,9 @@ body {
     float: right;
     margin-top: 30px;
     color: #fff;
-    width: 410px;
-    padding-top: 11px;
-    padding-bottom: 11px;
-    background: url("../img/white.png");
-    font-family: Calibrii;
+    padding: 10px;
+    background: url("/assets/img/white.png");
+    font-family: "Calibri";
     line-height: 40px;
     text-align: center;
     font-size: 14px;
@@ -112,17 +142,49 @@ body {
     background: #005caf;
 }
 
-#header-right ul li:hover {
+#header-right ul.hmenu li:hover, #header-right ul.hmenu li.active {
     background: #ff4300;
     cursor: pointer;
 }
 
-#header-right ul li.hmenu {
+#header-right ul.hmenu li {
     padding-right: 10px;
+    position: relative;
 }
 
 #header-right i {
     width: 40px;
+}
+
+#header-right ul.submenu {
+    display: none;
+    list-style: none;
+    position: absolute;
+    padding-top: 11px;
+}
+
+#header-right ul li:hover ul.submenu {
+    display: block;
+}
+
+#header-right ul.submenu li {
+    color: #000;
+    width: 140px;
+    padding: 1px;
+    font-weight: bold;
+    font-family: Verdana;
+    border-top: 1px solid #646464;
+    background: url("/assets/img/white.png");
+}
+
+#header-right ul.submenu li:nth-child(1) {
+    border-top: 0px;
+    padding-top: 0px;
+}
+
+#header-right ul.submenu li:hover {
+    color: #fff;
+    background: #333;
 }
 
 .clear {
@@ -179,7 +241,7 @@ body {
     line-height: 51px;
     text-align: center;
     padding-left: 10px;
-    background: url(../img/lm.png) no-repeat;
+    background: url(/assets/img/lm.png) no-repeat;
 }
 
 #right-con {
@@ -197,7 +259,7 @@ body {
     padding-bottom: 20px;
     margin-top: 30px;
     width: 660px;
-    background: url(../img/line.png) bottom no-repeat;
+    background: url(/assets/img/line.png) bottom no-repeat;
 }
 
 .context:nth-child(4) {
@@ -206,7 +268,7 @@ body {
 
 .con-left {
     float: left;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .con-left h1 {
@@ -222,12 +284,41 @@ body {
     color: #555;
 }
 
+.con-left p {
+    margin-top: 5px;
+    color: #666;
+}
+
+.con-left p i {
+    padding-right: 10px;
+    font-size: 14px;
+}
+
 .con-right h5 {
 
     margin-top: 13px;
     float: right;
     font-size: 16px;
     font-weight: normal;
+    color: #555;
+}
+
+.con-date-cat {
+    margin-bottom: 10px;
+}
+
+.con-date-cat p {
+    float: left;
+    color: #666;
+}
+
+.con-date-cat p i {
+    font-size: 14px;
+    padding-right: 10px;
+}
+
+.con-date-cat h5 {
+    float: right;
     color: #555;
 }
 
@@ -245,11 +336,8 @@ body {
     width: 430px;
 }
 
-.con-img {
-    float: left;
-}
-
 .con-img img {
+    float: left;
     width: 200px;
     padding: 5px;
     border: 1px solid #888;
@@ -288,7 +376,7 @@ body {
     max-width: 100%;
     min-width: 1300px;
     height: 180px;
-    background: url("../img/black.png");
+    background: url("/assets/img/black.png");
     border-top: 4px solid #666;
     text-align: center;
 }
@@ -316,7 +404,78 @@ body {
     height: 122px;
     width: 675px;
     margin: 0 auto;
-    background: url("../img/footer.png");
+    background: url("/assets/img/footer.png");
+}
+
+#fbox img {
+    width: 185px;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #888;
+}
+
+#contact {
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+#contact h1.title {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#contact .con-text {
+    float: left;
+    width: 120px;
+}
+
+#contact .con-text p {
+    font-size: 18px;
+    margin-top: 34px;
+}
+
+#contact .con-input {
+    margin-top: 4px;
+}
+
+#contact .con-input input,
+#contact .con-input textarea {
+    width: 280px;
+    padding: 8px;
+    margin-top: 20px;
+    border: 1px solid #bbb;
+}
+
+#contact .con-input textarea {
+    width: 380px;
+    height: 180px;
+    resize: none;
+}
+
+#contact .con-input {
+    float: left;
+}
+
+#contact input.send {
+    width: 140px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+    font: 15px Calibri;
+    background: #fe6803;
+    border: 1px solid #df5e08;
+    text-decoration: none;
+}
+
+#contact input.send:hover {
+    background: #ff8332;
+}
+
+#contact input.send:active {
+    background: #df5e08;
 }
 
 .slider-con {
@@ -329,11 +488,10 @@ body {
     float: left;
     font-family: Slider;
     text-shadow: 0 3px 4px rgba(0, 0, 0, 0.6);
-    background: url("../img/sli-div.png");
+    background: url("/assets/img/sli-div.png");
     padding: 15px;
     position: relative;
     margin-top: 90px;
-    width: 400px;
     margin-left: 90px;
 }
 
@@ -347,9 +505,6 @@ body {
 .sli-con p {
     font-size: 21px;
     color: #fff;
-    width: 400px;
-    white-space: pre-wrap;
-    word-wrap: break-word;
 }
 
 .carousel-fade
@@ -396,15 +551,44 @@ body,
     height: 100%;
 }
 
-.item:nth-child(1) {
-    background: url("../img/slide1.jpg") right;
+.item img {
+    width: 1000px;
+    height: 340px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
 }
 
-.item:nth-child(2) {
-    background: url("../img/slide2.jpg") right;
+.ReadableText {
+    margin-top: 10px;
+    padding: 0 15px;
+    font-size: 15px;
+    line-height: 160%;
+    text-align: justify;
+    text-rendering: optimizeLegibility;
 }
 
-.item:nth-child(3) {
-    background: url("../img/slide3.jpg") right;
+.ReadableText p {
+    text-indent: 40px;
 }
 
+.ReadableText a {
+    text-decoration: none;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.ReadableText a:hover {
+    text-decoration: underline;
+}
+
+.ReadableText img {
+    float: left;
+    width: 200px;
+    padding: 5px;
+    margin-top: 4px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #888;
+}

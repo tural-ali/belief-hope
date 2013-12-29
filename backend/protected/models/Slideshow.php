@@ -45,7 +45,7 @@ class Slideshow extends CActiveRecord
                 'types' => 'jpg, gif, png, jpeg',
                 'safe' => true,
                 'allowEmpty' => true,
-                'maxSize' => 1024 * 1024 * 500,
+                'maxSize' => 1024 * 1024 * 10,
             ),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.

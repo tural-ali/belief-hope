@@ -1,20 +1,29 @@
 <?php
 /* @var $this SiteController */
 
-$this->pageTitle=Yii::app()->name;
+$this->pageTitle = Yii::app()->name;
 ?>
 
-<h1>Welcome to <i><?php echo CHtml::encode(Yii::app()->name); ?></i></h1>
-
-<p>Congratulations! You have successfully created your Yii application.</p>
-
-<p>You may change the content of this page by modifying the following two files:</p>
-<ul>
-	<li>View file: <code><?php echo __FILE__; ?></code></li>
-	<li>Layout file: <code><?php echo $this->getLayoutFile('main'); ?></code></li>
-</ul>
-
-<p>For more details on how to further develop this application, please read
-the <a href="http://www.yiiframework.com/doc/">documentation</a>.
-Feel free to ask in the <a href="http://www.yiiframework.com/forum/">forum</a>,
-should you have any questions.</p>
+<div class="context">
+    <div class="con-left">
+        <h1>Numune ucun Basliq</h1>
+    </div>
+    <div class="con-right"><h5><i class="fa fa-bookmark"></i> Kateqoriya: <span>Numune</span></h5>
+    </div>
+    <div class="clear"></div>
+    <div class="con-img"><img class="img-thumbnail" src="assets/img/image1.jpg" alt=""/></div>
+    <div class="con-body">
+        There are many variations of passages of Lorem Ipsum available, but the majority have
+        suffered alteration in some form, by injected humour, or randomised words which don't look
+        even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be
+        sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum
+        generators on the Internet tend to repeat predefined chunks as necessary, making this the
+        first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined
+        with a handful of model sentence structures, to generate Lorem Ipsum which looks
+        reasonable...
+    </div>
+    <div class="clear"></div>
+    <div class="con-fleft"><i class="fa fa-calendar"></i> 23 iyun 2013</div>
+    <div class="con-fright"><a href="#"><i class="fa fa-book"></i> Read More</a></div>
+    <div class="clear"></div>
+</div>

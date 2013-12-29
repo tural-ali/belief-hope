@@ -49,3 +49,163 @@ Stack trace:
 REQUEST_URI=/backend/photo/delete/8?ajax=photo-grid
 HTTP_REFERER=http://beliefandhope.local/backend/photoalbum/update/4
 ---
+2013/12/29 15:57:10 [error] [exception.CException] exception 'CException' with message 'Content and its behaviors do not have a method or closure named "isBlog".' in /var/www/belief-hope/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/belief-hope/framework/db/ar/CActiveRecord.php(227): CComponent->__call('isBlog', Array)
+#1 /var/www/belief-hope/backend/protected/views/content/admin.php(16): CActiveRecord->__call('isBlog', Array)
+#2 /var/www/belief-hope/backend/protected/views/content/admin.php(16): Content->isBlog()
+#3 /var/www/belief-hope/framework/web/CBaseController.php(126): require('/var/www/belief...')
+#4 /var/www/belief-hope/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/belief...', Array, true)
+#5 /var/www/belief-hope/framework/web/CController.php(869): CBaseController->renderFile('/var/www/belief...', Array, true)
+#6 /var/www/belief-hope/framework/web/CController.php(782): CController->renderPartial('admin', Array, true)
+#7 /var/www/belief-hope/backend/protected/controllers/ContentController.php(228): CController->render('admin', Array)
+#8 /var/www/belief-hope/framework/web/actions/CInlineAction.php(49): ContentController->actionAdmin()
+#9 /var/www/belief-hope/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /var/www/belief-hope/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 /var/www/belief-hope/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#12 /var/www/belief-hope/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 /var/www/belief-hope/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 /var/www/belief-hope/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 /var/www/belief-hope/framework/web/CController.php(291): CFilterChain->run()
+#16 /var/www/belief-hope/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 /var/www/belief-hope/framework/web/CWebApplication.php(282): CController->run('admin')
+#18 /var/www/belief-hope/framework/web/CWebApplication.php(141): CWebApplication->runController('content/admin')
+#19 /var/www/belief-hope/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#20 /var/www/belief-hope/backend/index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/backend/content/admin
+HTTP_REFERER=http://beliefandhope.local/backend/
+---
+2013/12/29 15:58:02 [error] [exception.CException] exception 'CException' with message 'Content and its behaviors do not have a method or closure named "isBlog".' in /var/www/belief-hope/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/belief-hope/framework/db/ar/CActiveRecord.php(227): CComponent->__call('isBlog', Array)
+#1 /var/www/belief-hope/backend/protected/views/content/admin.php(16): CActiveRecord->__call('isBlog', Array)
+#2 /var/www/belief-hope/backend/protected/views/content/admin.php(16): Content->isBlog()
+#3 /var/www/belief-hope/framework/web/CBaseController.php(126): require('/var/www/belief...')
+#4 /var/www/belief-hope/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/belief...', Array, true)
+#5 /var/www/belief-hope/framework/web/CController.php(869): CBaseController->renderFile('/var/www/belief...', Array, true)
+#6 /var/www/belief-hope/framework/web/CController.php(782): CController->renderPartial('admin', Array, true)
+#7 /var/www/belief-hope/backend/protected/controllers/ContentController.php(228): CController->render('admin', Array)
+#8 /var/www/belief-hope/framework/web/actions/CInlineAction.php(49): ContentController->actionAdmin()
+#9 /var/www/belief-hope/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /var/www/belief-hope/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 /var/www/belief-hope/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#12 /var/www/belief-hope/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 /var/www/belief-hope/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 /var/www/belief-hope/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 /var/www/belief-hope/framework/web/CController.php(291): CFilterChain->run()
+#16 /var/www/belief-hope/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 /var/www/belief-hope/framework/web/CWebApplication.php(282): CController->run('admin')
+#18 /var/www/belief-hope/framework/web/CWebApplication.php(141): CWebApplication->runController('content/admin')
+#19 /var/www/belief-hope/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#20 /var/www/belief-hope/backend/index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/backend/content/admin
+HTTP_REFERER=http://beliefandhope.local/backend/
+---
+2013/12/29 15:58:04 [error] [exception.CException] exception 'CException' with message 'Content and its behaviors do not have a method or closure named "isBlog".' in /var/www/belief-hope/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/belief-hope/framework/db/ar/CActiveRecord.php(227): CComponent->__call('isBlog', Array)
+#1 /var/www/belief-hope/backend/protected/views/content/admin.php(16): CActiveRecord->__call('isBlog', Array)
+#2 /var/www/belief-hope/backend/protected/views/content/admin.php(16): Content->isBlog()
+#3 /var/www/belief-hope/framework/web/CBaseController.php(126): require('/var/www/belief...')
+#4 /var/www/belief-hope/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/belief...', Array, true)
+#5 /var/www/belief-hope/framework/web/CController.php(869): CBaseController->renderFile('/var/www/belief...', Array, true)
+#6 /var/www/belief-hope/framework/web/CController.php(782): CController->renderPartial('admin', Array, true)
+#7 /var/www/belief-hope/backend/protected/controllers/ContentController.php(228): CController->render('admin', Array)
+#8 /var/www/belief-hope/framework/web/actions/CInlineAction.php(49): ContentController->actionAdmin()
+#9 /var/www/belief-hope/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /var/www/belief-hope/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 /var/www/belief-hope/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#12 /var/www/belief-hope/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 /var/www/belief-hope/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 /var/www/belief-hope/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 /var/www/belief-hope/framework/web/CController.php(291): CFilterChain->run()
+#16 /var/www/belief-hope/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 /var/www/belief-hope/framework/web/CWebApplication.php(282): CController->run('admin')
+#18 /var/www/belief-hope/framework/web/CWebApplication.php(141): CWebApplication->runController('content/admin')
+#19 /var/www/belief-hope/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#20 /var/www/belief-hope/backend/index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/backend/content/admin
+HTTP_REFERER=http://beliefandhope.local/backend/
+---
+2013/12/29 15:58:04 [error] [exception.CException] exception 'CException' with message 'Content and its behaviors do not have a method or closure named "isBlog".' in /var/www/belief-hope/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/belief-hope/framework/db/ar/CActiveRecord.php(227): CComponent->__call('isBlog', Array)
+#1 /var/www/belief-hope/backend/protected/views/content/admin.php(16): CActiveRecord->__call('isBlog', Array)
+#2 /var/www/belief-hope/backend/protected/views/content/admin.php(16): Content->isBlog()
+#3 /var/www/belief-hope/framework/web/CBaseController.php(126): require('/var/www/belief...')
+#4 /var/www/belief-hope/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/belief...', Array, true)
+#5 /var/www/belief-hope/framework/web/CController.php(869): CBaseController->renderFile('/var/www/belief...', Array, true)
+#6 /var/www/belief-hope/framework/web/CController.php(782): CController->renderPartial('admin', Array, true)
+#7 /var/www/belief-hope/backend/protected/controllers/ContentController.php(228): CController->render('admin', Array)
+#8 /var/www/belief-hope/framework/web/actions/CInlineAction.php(49): ContentController->actionAdmin()
+#9 /var/www/belief-hope/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /var/www/belief-hope/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 /var/www/belief-hope/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#12 /var/www/belief-hope/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 /var/www/belief-hope/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 /var/www/belief-hope/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 /var/www/belief-hope/framework/web/CController.php(291): CFilterChain->run()
+#16 /var/www/belief-hope/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 /var/www/belief-hope/framework/web/CWebApplication.php(282): CController->run('admin')
+#18 /var/www/belief-hope/framework/web/CWebApplication.php(141): CWebApplication->runController('content/admin')
+#19 /var/www/belief-hope/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#20 /var/www/belief-hope/backend/index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/backend/content/admin
+HTTP_REFERER=http://beliefandhope.local/backend/
+---
+2013/12/29 15:58:04 [error] [exception.CException] exception 'CException' with message 'Content and its behaviors do not have a method or closure named "isBlog".' in /var/www/belief-hope/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/belief-hope/framework/db/ar/CActiveRecord.php(227): CComponent->__call('isBlog', Array)
+#1 /var/www/belief-hope/backend/protected/views/content/admin.php(16): CActiveRecord->__call('isBlog', Array)
+#2 /var/www/belief-hope/backend/protected/views/content/admin.php(16): Content->isBlog()
+#3 /var/www/belief-hope/framework/web/CBaseController.php(126): require('/var/www/belief...')
+#4 /var/www/belief-hope/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/belief...', Array, true)
+#5 /var/www/belief-hope/framework/web/CController.php(869): CBaseController->renderFile('/var/www/belief...', Array, true)
+#6 /var/www/belief-hope/framework/web/CController.php(782): CController->renderPartial('admin', Array, true)
+#7 /var/www/belief-hope/backend/protected/controllers/ContentController.php(228): CController->render('admin', Array)
+#8 /var/www/belief-hope/framework/web/actions/CInlineAction.php(49): ContentController->actionAdmin()
+#9 /var/www/belief-hope/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /var/www/belief-hope/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 /var/www/belief-hope/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#12 /var/www/belief-hope/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 /var/www/belief-hope/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 /var/www/belief-hope/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 /var/www/belief-hope/framework/web/CController.php(291): CFilterChain->run()
+#16 /var/www/belief-hope/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 /var/www/belief-hope/framework/web/CWebApplication.php(282): CController->run('admin')
+#18 /var/www/belief-hope/framework/web/CWebApplication.php(141): CWebApplication->runController('content/admin')
+#19 /var/www/belief-hope/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#20 /var/www/belief-hope/backend/index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/backend/content/admin
+HTTP_REFERER=http://beliefandhope.local/backend/
+---
+2013/12/29 16:46:05 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`beliefandhope`.`Content`, CONSTRAINT `Content_ibfk_2` FOREIGN KEY (`catID`) REFERENCES `Hierarchy` (`id`) ON DELETE SET NULL ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `Content` (`isBlog`, `imgUrl`, `catID`, `title_az`, `content_az`, `title_en`, `content_en`, `title_ru`, `content_ru`, `albumID`, `videoID`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10).
+in /var/www/belief-hope/backend/protected/controllers/ContentController.php (133)
+in /var/www/belief-hope/backend/index.php (13)
+2013/12/29 16:46:05 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`beliefandhope`.`Content`, CONSTRAINT `Content_ibfk_2` FOREIGN KEY (`catID`) REFERENCES `Hierarchy` (`id`) ON DELETE SET NULL ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `Content` (`isBlog`, `imgUrl`, `catID`, `title_az`, `content_az`, `title_en`, `content_en`, `title_ru`, `content_ru`, `albumID`, `videoID`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)' in /var/www/belief-hope/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /var/www/belief-hope/framework/db/ar/CActiveRecord.php(1080): CDbCommand->execute()
+#1 /var/www/belief-hope/framework/db/ar/CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 /var/www/belief-hope/backend/protected/controllers/ContentController.php(133): CActiveRecord->save(false)
+#3 /var/www/belief-hope/framework/web/actions/CInlineAction.php(49): ContentController->actionCreate()
+#4 /var/www/belief-hope/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/belief-hope/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/belief-hope/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/belief-hope/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/belief-hope/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/belief-hope/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/belief-hope/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/belief-hope/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/belief-hope/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/belief-hope/framework/web/CWebApplication.php(141): CWebApplication->runController('content/create')
+#14 /var/www/belief-hope/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/belief-hope/backend/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/backend/content/create
+HTTP_REFERER=http://beliefandhope.local/backend/content/create
+---

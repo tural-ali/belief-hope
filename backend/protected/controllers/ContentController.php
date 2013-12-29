@@ -64,7 +64,19 @@ class ContentController extends Controller
         // $this->performAjaxValidation($model);
 
         if (isset($_POST['Content'])) {
+
+            $oldUrl = $model->imgUrl;
             $model->attributes = $_POST['Content'];
+            $model->image = CUploadedFile::getInstance($model, 'image');
+            if ($model->image == null)
+                $model->imgUrl = $oldUrl;
+            else {
+                $ext = pathinfo($model->image->name, PATHINFO_EXTENSION);
+                $filename = "bp_" . substr(uniqid(), -5) . "." . $ext;
+                $model->image->saveAs(dirname(__FILE__) . '/../../../uploads/images/' . $filename);
+                $model->imgUrl = '/uploads/images/' . $filename;
+            }
+
             if (empty($_POST["Content"]["albumID"]))
                 $model->albumID = null;
             if (empty($_POST["Content"]["videoID"]))
@@ -101,10 +113,15 @@ class ContentController extends Controller
     public function actionCreate()
     {
         $model = new Content;
-
-
-        // Uncomment the following line if AJAX validation is needed
-        // $this->performAjaxValidation($model);
+        $model->image = CUploadedFile::getInstance($model, 'image');
+        if ($model->image == null)
+            $model->imgUrl = null;
+        else {
+            $ext = pathinfo($model->image->name, PATHINFO_EXTENSION);
+            $filename = 'bp_' . substr(uniqid(), -5) . "." . $ext;
+            $model->image->saveAs(dirname(__FILE__) . '/../../../uploads/images/' . $filename);
+            $model->imgUrl = '/uploads/images/' . $filename;
+        }
 
         if (isset($_POST['Content'])) {
             $model->attributes = $_POST['Content'];
@@ -113,7 +130,7 @@ class ContentController extends Controller
             if ($_POST["Content"]["videoID"] == "")
                 $model->videoID = Null;
 
-            if ($model->save(false)) {
+            if ($model->save()) {
                 $blogID = $model->primaryKey;
                 $langs = Yii::app()->params["languages"];
                 foreach ($langs as $lang => $value) {
