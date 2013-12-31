@@ -209,3 +209,37 @@ Stack trace:
 REQUEST_URI=/backend/content/create
 HTTP_REFERER=http://beliefandhope.local/backend/content/create
 ---
+2013/12/30 00:25:03 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /var/www/belief-hope/framework/web/CController.php:336
+Stack trace:
+#0 /var/www/belief-hope/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /var/www/belief-hope/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /var/www/belief-hope/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/belief-hope/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /var/www/belief-hope/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /var/www/belief-hope/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/belief-hope/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/belief-hope/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/belief-hope/framework/web/CWebApplication.php(282): CController->run('update')
+#9 /var/www/belief-hope/framework/web/CWebApplication.php(141): CWebApplication->runController('dictionary/upda...')
+#10 /var/www/belief-hope/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/belief-hope/backend/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/backend/dictionary/update/favicon.ico
+---
+2013/12/30 00:25:03 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /var/www/belief-hope/framework/web/CController.php:336
+Stack trace:
+#0 /var/www/belief-hope/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /var/www/belief-hope/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /var/www/belief-hope/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/belief-hope/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /var/www/belief-hope/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /var/www/belief-hope/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/belief-hope/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/belief-hope/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/belief-hope/framework/web/CWebApplication.php(282): CController->run('update')
+#9 /var/www/belief-hope/framework/web/CWebApplication.php(141): CWebApplication->runController('dictionary/upda...')
+#10 /var/www/belief-hope/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/belief-hope/backend/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/backend/dictionary/update/favicon.ico
+---

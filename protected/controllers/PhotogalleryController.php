@@ -7,7 +7,7 @@ class ContentController extends Controller
 
 
     public function actionIndex(){
-        
+
 
 
     }

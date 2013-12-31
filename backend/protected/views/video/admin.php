@@ -27,7 +27,7 @@
         'title_az',
         array(
             'class' => 'CButtonColumn',
-            'template' => '{view} {delete}',
+            'template' => '{update} {delete}',
             'htmlOptions' => array('width' => '30px'),
             'buttons' => array(
                 'update' => array(
