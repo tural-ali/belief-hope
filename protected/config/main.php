@@ -59,10 +59,11 @@ return array(
             'caseSensitive' => false,
             'rules' => array(
                 '<timestamp:\d+>/<slug:[\w\W]{0,}>' => 'content/view',
+                '<language:(az|ru|en)>/<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
+                '<language:(az|ru|en)>/<controller:\w+>/<action:\w+>' => '<controller>/<action>',
                 '<language:(az|ru|en)>/<token:[\w\W]{0,}>' => 'site/<token>',
                 '<language:(az|ru|en)>/' => 'site/index',
                 '<language:(az|ru|en)>/<controller:\w+>/<id:\d+>' => '<controller>/view',
-                '<language:(az|ru|en)>/<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
                 '<language:(az|ru|en)>/<controller:\w+>/<action:\w+>/*' => '<controller>/<action>',
             ),
         ),

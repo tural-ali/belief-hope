@@ -19,8 +19,14 @@ $css = array(
         $pathCSS["root"] . "bootstrap.min.css",
         $pathCSS["root"] . "style.css"
     ),
-    site_index => array()
-
+    "site_index" => array(),
+    "photogallery_index" => array(
+        $pathCSS["root"] . "photogallery.css"
+    ),
+    "photogallery_album" => array(
+        $path["plug-ins"] . "fancybox/jquery.fancybox.css",
+        $path["plug-ins"] . "fancybox/jquery.fancybox-thumbs.css",
+    ),
 
 );
 
@@ -32,16 +38,33 @@ $js = array(
         $pathJS["mandatory"] . "bootstrap.min.js",
         $pathJS["root"] . "initialize.js",
     ),
-    site_index => array()
+    "site_index" => array(),
+
+    "photogallery_index" => array(
+        $pathJS["pages"] . "photogallery.js"
+    ),
+    "photogallery_album" => array(
+        $path["plug-ins"] . "fancybox/jquery.fancybox.pack.js",
+        $path["plug-ins"] . "fancybox/jquery.fancybox-thumbs.js",
+        $pathJS["pages"] . "photoalbum.js"
+    ),
 
 );
 
 return array(
     'site_index_css' => array_merge($css["mandatory"], $css["site_index"]),
     'site_index_js' => array_merge($js["mandatory"], $js["site_index"]),
+
+    'photogallery_index_css' => array_merge($css["mandatory"], $css["photogallery_index"]),
+    'photogallery_index_js' => array_merge($js["mandatory"], $js["photogallery_index"]),
+
+    'photogallery_album_css' => array_merge($css["mandatory"], $css["photogallery_album"]),
+    'photogallery_album_js' => array_merge($js["mandatory"], $js["photogallery_album"]),
+
     'site_contact_css' => array_merge($css["mandatory"], $css["site_index"]),
     'site_contact_js' => array_merge($js["mandatory"], $js["site_index"]),
     'content_view_css' => array_merge($css["mandatory"], $css["site_index"]),
     'content_view_js' => array_merge($js["mandatory"], $js["site_index"]),
+
 
 );

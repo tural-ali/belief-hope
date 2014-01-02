@@ -54,6 +54,14 @@ class SiteController extends Controller
         )));
     }
 
+    public function actionPhotogallery()
+    {
+        $this->redirect("/" . Yii::app()->language . "/photogallery/index");
+    }
 
+    public function actionVideogallery()
+    {
+        $this->redirect("/" . Yii::app()->language . "/videogallery/index");
+    }
 
 }

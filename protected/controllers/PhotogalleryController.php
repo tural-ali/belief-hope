@@ -1,60 +1,72 @@
 <?php
 
-class ContentController extends Controller
+class PhotogalleryController extends Controller
 {
 
     public $layout = 'column1';
 
 
-    public function actionIndex(){
+    public function actionIndex()
 
+    {
+        $criteria = new CDbCriteria();
+        $criteria->compare('showInGallery', 1);
+        $albums = Photoalbum::model()->findAll();
+        $html = "<div class='row'>";
+        $lang = Yii::app()->language;
 
+        foreach ($albums as $album) {
+
+            $coverUrl = $this->findAlbumCover($album->id);
+            $title = $album->{"name_" . $lang};
+            $url = "/$lang/photogallery/album/$album->id";
+            $html .= "<div class='album col-sm-6 col-md-4'>
+            <a href='$url'>
+            <span class='dark-background'>$title</span>
+              <img src='$coverUrl' class='img-thumbnail'>
+                  </a>
+              </div>";
+        }
+        $html .= "</div>";
+        $this->render('index', array("content" => $html));
 
     }
 
-    public function actionView()
+
+    public function findAlbumCover($id)
     {
-        $slugHash = substr(md5(Yii::app()->request->getParam('slug')), -5);
-        $timestamp = date('Y-m-d H:i:s', Yii::app()->request->getParam('timestamp'));
-        $currentLang = Yii::app()->language;
-
         $criteria = new CDbCriteria();
-        $criteria->compare('hash', $slugHash);
-        $criteria->compare('createdAt', $timestamp);
-        $criteria->compare('lang', $currentLang);
-        $criteria->limit = 1;
-        $result = Slug::model()->find($criteria);
-        if ($result) {
+        $criteria->compare('main', 1);
+        $criteria->compare('albumID', $id);
+        $mainPhoto = Photo::model()->find($criteria);
+        if (count($mainPhoto) == 0) {
             $criteria = new CDbCriteria();
-            $criteria->compare('id', $result->blogID);
-            $blogpost = Content::model()->find($criteria);
-            $this->layout = 'column1';
-            $data = array(
-                'title' => $blogpost->{'title_' . $currentLang},
-                'content' => $blogpost->{'content_' . $currentLang},
-                "timestamp" => date('d.m.Y', Yii::app()->request->getParam('timestamp'))
-            );
-
-            if (!is_null($blogpost->catID))
-                $data["category"] = $blogpost->cat->{'title_' . $currentLang};
-            if (!is_null($blogpost->videoID))
-                $data["videoHtml"] = $this->generateVideoHtml($blogpost->videoID);
-            if (!is_null($blogpost->albumID))
-                $data["galleryHtml"] = $this->generateGallery($blogpost->albumID);
-
-            if (!is_null($blogpost->imgUrl))
-                $data["imgUrl"] = $blogpost->imgUrl;
-            $this->render('view', $data);
+            $criteria->compare('albumID', $id);
+            $criteria->order = "id ASC";
+            $criteria->limit = 1;
+            $photo = Photo::model()->find($criteria);
+            $photo->main = 1;
+            if ($photo->save())
+                $this->findAlbumCover($id);
         } else {
-            throw new CHttpException(404, Yii::t('common', '404'));
+            $url = $mainPhoto->url;
+            return $url;
         }
+    }
 
+
+    public function actionAlbum()
+    {
+        $id = Yii::app()->request->getParam('id');
+        $this->render('//layouts/simple', array("content" => $this->generateGallery($id)));
     }
 
 
     public function generateGallery($id)
     {
-        $html = "";
+
+        $title = Photoalbum::model()->findByPk($id)->{"name_" . Yii::app()->language};
+        $html = "<center><h2>$title</h2></center>";
         $criteria = new CDbCriteria();
         $criteria->compare("albumID", $id);
         $results = Photo::model()->findAll($criteria);
@@ -66,12 +78,6 @@ class ContentController extends Controller
         return $html;
     }
 
-
-    public function generateVideoHtml($id)
-    {
-        $video = Video::model()->findByPk($id);
-        return "<iframe width='853' height='480' src='//www.youtube.com/embed/$video->videoID?rel=0' frameborder='0' allowfullscreen></iframe>";
-    }
 
     public function actionError()
     {
