@@ -1,18 +1,16 @@
-<div class="context">
+<div class="blogpost">
     <div class="con-left">
         <h1><?= $title ?></h1>
     </div>
     <div class="clear"></div>
 
     <div class="con-date-cat">
-        <p><i class="fa fa-calendar"></i><?= $timestamp ?></p>
+        <span><i class="fa fa-calendar"></i><?= $timestamp ?></span> |
 
         <?
         if (isset($category))
-            echo "<h5>
-                    <i class='fa fa-bookmark'></i>
-                    <span>" . Yii::t('common', 'category') . ": " . $category . "</span>
-                   </h5>";
+            echo "<span>
+                    <i class='fa fa-bookmark'></i>" . Yii::t('common', 'category') . ": " . $category . "</span>";
         ?>
     </div>
     <br class="clear"/>
