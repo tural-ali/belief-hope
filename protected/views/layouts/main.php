@@ -35,23 +35,7 @@ $actionName = Yii::app()->controller->action->id;
 </div>
 
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=turalaliyev"></script>
-<script type="text/javascript">
-    addthis.layers({
-        'theme': 'transparent',
-        'share': {
-            'position': 'left',
-            'numPreferredServices': 5
-        },
-        'follow': {
-            'services': [
-                {'service': 'twitter', 'id': 'belief_and_hope'},
-                {'service': 'youtube', 'id': 'beliefandhopedotcom'}
-            ]
-        },
-        'whatsnext': {},
-        'recommended': {}
-    });
-</script>
+
 
 <div id="footer">
     <div id="ftlogo"></div>

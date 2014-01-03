@@ -5,12 +5,10 @@
     <div class="clear"></div>
 
     <div class="con-date-cat">
-        <span><i class="fa fa-calendar"></i><?= $timestamp ?></span> |
-
+        <span><i class="fa fa-calendar"></i><?= $timestamp ?></span>
         <?
         if (isset($category))
-            echo "<span>
-                    <i class='fa fa-bookmark'></i>" . Yii::t('common', 'category') . ": " . $category . "</span>";
+            echo " | <span><i class='fa fa-bookmark'></i> " . Yii::t('common', 'category') . ": " . $category . "</span>";
         ?>
     </div>
     <br class="clear"/>

@@ -7,6 +7,25 @@ $(document).ready(function () {
     $(".slide").click(function () {
         window.location.href = $(this).data("href");
         return false;
-    })
+    });
+
+    addthis.layers({
+        'theme': 'transparent',
+        'share': {
+            'position': 'left',
+            'numPreferredServices': 5
+        },
+        'follow': {
+            'services': [
+                {'service': 'twitter', 'id': 'belief_and_hope'},
+                {'service': 'youtube', 'id': 'beliefandhopedotcom'}
+            ]
+        },
+        'whatsnext': {},
+        'recommended': {}
+    });
+
+    var addthis_config = {"data_track_addressbar": true};
+
 });
 

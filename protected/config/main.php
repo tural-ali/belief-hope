@@ -110,6 +110,6 @@ return array(
         'adminEmail' => 'mail@tural.us',
         'wsurl' => "http://" . $_SERVER['HTTP_HOST'],
         'blogPerPage' => 3,
-        'languages' => array('az' => 'az', 'ru' => 'ru', 'en' => "en")
+        'languages' => array('az' => 'az', 'ru' => 'ru')
     ),
 );
