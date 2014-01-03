@@ -30,13 +30,18 @@
 
 <?
 if (isset($videoHtml))
-    echo "<h1>Videolar</h1>" . $videoHtml;
+    echo "<div class='videos'><h1>Videolar</h1>" . $videoHtml . "</div>";
+
+
 
 ?>
 
+
 <?
 if (isset($galleryHtml))
-    echo "<h1>Fotolar</h1>" . $galleryHtml;
+    echo "<img src='/assets/img/line.png'/>
+    <div class='photos'>
+    <h1>Fotolar</h1>" . $galleryHtml . "</div>";
 
 ?>
 
