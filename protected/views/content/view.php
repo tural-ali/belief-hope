@@ -27,16 +27,16 @@
     </div>
     <div class="clear"></div>
 </div>
-<h1>Videolar</h1>
+
 <?
 if (isset($videoHtml))
-    echo $videoHtml;
+    echo "<h1>Videolar</h1>" . $videoHtml;
 
 ?>
-<h1>Fotolar</h1>
+
 <?
 if (isset($galleryHtml))
-    echo $galleryHtml;
+    echo "<h1>Fotolar</h1>" . $galleryHtml;
 
 ?>
 
