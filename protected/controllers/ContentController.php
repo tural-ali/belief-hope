@@ -27,8 +27,7 @@ class ContentController extends Controller
 
             if (!is_null($blogpost->catID))
                 $data["category"] = $blogpost->cat->{'title_' . $currentLang};
-            if (!is_null($blogpost->videoID))
-                $data["videoHtml"] = $this->generateVideoHtml($blogpost->videoID);
+            $data["videoHtml"] = $this->generateVideoHtml($blogpost->id);
             if (!is_null($blogpost->albumID))
                 $data["galleryHtml"] = $this->generateGallery($blogpost->albumID);
 
@@ -59,8 +58,30 @@ class ContentController extends Controller
 
     public function generateVideoHtml($id)
     {
-        $video = Video::model()->findByPk($id);
-        return "<iframe width='853' height='480' src='//www.youtube.com/embed/$video->videoID?rel=0' frameborder='0' allowfullscreen></iframe>";
+        $criteria = new CDbCriteria();
+        $criteria->compare("contentID", $id);
+        $results = ContentVideo::model()->findAll($criteria);
+        if (count($results) > 0) {
+            $html = "<div class='row'>";
+            $lang = Yii::app()->language;
+
+            foreach ($results as $result) {
+                $videoid = (string)$result->video->videoID;
+                $id = $result->videoID;
+                $coverUrl = "http://img.youtube.com/vi/$videoid/mqdefault.jpg";
+                $title = $result->video->{"title_" . $lang};
+                $url = "/$lang/videogallery/$id";
+                $html .= "<div class='video col-sm-6 col-md-4'>
+            <a href='$url'>
+            <span class='dark-background'>$title</span>
+              <img src='$coverUrl' class='img-thumbnail'>
+                  </a>
+              </div>";
+            }
+            $html .= "</div>";
+            return $html;
+        } else return null;
+
     }
 
     public function actionError()

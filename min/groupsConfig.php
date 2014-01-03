@@ -68,15 +68,11 @@ return array(
     'site_events_js' => array_merge($js["mandatory"], $js["site_index"]),
 
 
-
     'site_sparkle_css' => array_merge($css["mandatory"], $css["site_index"]),
     'site_sparkle_js' => array_merge($js["mandatory"], $js["site_index"]),
 
     'site_interviews_css' => array_merge($css["mandatory"], $css["site_index"]),
     'site_interviews_js' => array_merge($js["mandatory"], $js["site_index"]),
-
-
-
 
 
     'site_charity_css' => array_merge($css["mandatory"], $css["site_index"]),
@@ -99,8 +95,8 @@ return array(
     'site_contact_css' => array_merge($css["mandatory"], $css["site_index"]),
     'site_contact_js' => array_merge($js["mandatory"], $js["site_index"]),
 
-    'content_view_css' => array_merge($css["mandatory"], $css["site_index"], $css["photogallery_album"]),
-    'content_view_js' => array_merge($js["mandatory"], $js["site_index"], $js["photogallery_album"]),
+    'content_view_css' => array_merge($css["mandatory"], $css["site_index"], $css["photogallery_album"], $css["videogallery_index"]),
+    'content_view_js' => array_merge($js["mandatory"], $js["site_index"], $js["photogallery_album"], $js["videogallery_index"]),
 
 
 );

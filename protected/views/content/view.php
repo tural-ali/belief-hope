@@ -3,11 +3,7 @@
         <h1><?= $title ?></h1>
     </div>
     <div class="clear"></div>
-    <?
-    if (isset($videoHtml))
-        echo $videoHtml;
 
-    ?>
     <div class="con-date-cat">
         <p><i class="fa fa-calendar"></i><?= $timestamp ?></p>
 
@@ -31,9 +27,16 @@
     </div>
     <div class="clear"></div>
 </div>
+<h1>Videolar</h1>
+<?
+if (isset($videoHtml))
+    echo $videoHtml;
 
+?>
+<h1>Fotolar</h1>
 <?
 if (isset($galleryHtml))
     echo $galleryHtml;
 
 ?>
+
