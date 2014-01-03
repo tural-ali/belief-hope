@@ -1,4 +1,5 @@
 <?
+
 class Typography
 {
 
@@ -47,6 +48,25 @@ class Typography
         $tokenarr = explode(" ", $token);
         $token = trim($tokenarr[0]);
         return $token;
+    }
+
+
+    public static function truncate($str, $n, $delim = '…')
+    {
+        $parts = preg_split('/([\s\n\r]+)/', $str, null, PREG_SPLIT_DELIM_CAPTURE);
+        $parts_count = count($parts);
+
+        $length = 0;
+        $last_part = 0;
+        for (; $last_part < $parts_count; ++$last_part) {
+            $length += strlen($parts[$last_part]);
+            if ($length > $n) {
+                break;
+            }
+        }
+        $result = implode(array_slice($parts, 0, $last_part));
+
+        return $result . $delim;
     }
 
 }

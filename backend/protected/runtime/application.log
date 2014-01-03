@@ -243,3 +243,83 @@ Stack trace:
 #12 {main}
 REQUEST_URI=/backend/dictionary/update/favicon.ico
 ---
+2014/01/03 18:29:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "favicon.ico".' in /var/www/belief-hope/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/belief-hope/framework/web/CController.php(270): CController->missingAction('favicon.ico')
+#1 /var/www/belief-hope/framework/web/CWebApplication.php(282): CController->run('favicon.ico')
+#2 /var/www/belief-hope/framework/web/CWebApplication.php(141): CWebApplication->runController('dashboard/favic...')
+#3 /var/www/belief-hope/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/belief-hope/backend/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/backend/dashboard/favicon.ico
+---
+2014/01/03 18:29:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "favicon.ico".' in /var/www/belief-hope/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/belief-hope/framework/web/CController.php(270): CController->missingAction('favicon.ico')
+#1 /var/www/belief-hope/framework/web/CWebApplication.php(282): CController->run('favicon.ico')
+#2 /var/www/belief-hope/framework/web/CWebApplication.php(141): CWebApplication->runController('dashboard/favic...')
+#3 /var/www/belief-hope/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/belief-hope/backend/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/backend/dashboard/favicon.ico
+---
+2014/01/03 18:29:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "favicon.ico".' in /var/www/belief-hope/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/belief-hope/framework/web/CController.php(270): CController->missingAction('favicon.ico')
+#1 /var/www/belief-hope/framework/web/CWebApplication.php(282): CController->run('favicon.ico')
+#2 /var/www/belief-hope/framework/web/CWebApplication.php(141): CWebApplication->runController('dictionary/favi...')
+#3 /var/www/belief-hope/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/belief-hope/backend/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/backend/dictionary/favicon.ico
+---
+2014/01/03 18:29:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "favicon.ico".' in /var/www/belief-hope/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/belief-hope/framework/web/CController.php(270): CController->missingAction('favicon.ico')
+#1 /var/www/belief-hope/framework/web/CWebApplication.php(282): CController->run('favicon.ico')
+#2 /var/www/belief-hope/framework/web/CWebApplication.php(141): CWebApplication->runController('dictionary/favi...')
+#3 /var/www/belief-hope/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/belief-hope/backend/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/backend/dictionary/favicon.ico
+---
+2014/01/03 18:30:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "favicon.ico".' in /var/www/belief-hope/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/belief-hope/framework/web/CController.php(270): CController->missingAction('favicon.ico')
+#1 /var/www/belief-hope/framework/web/CWebApplication.php(282): CController->run('favicon.ico')
+#2 /var/www/belief-hope/framework/web/CWebApplication.php(141): CWebApplication->runController('content/favicon...')
+#3 /var/www/belief-hope/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/belief-hope/backend/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/backend/content/favicon.ico
+---
+2014/01/03 18:30:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "favicon.ico".' in /var/www/belief-hope/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/belief-hope/framework/web/CController.php(270): CController->missingAction('favicon.ico')
+#1 /var/www/belief-hope/framework/web/CWebApplication.php(282): CController->run('favicon.ico')
+#2 /var/www/belief-hope/framework/web/CWebApplication.php(141): CWebApplication->runController('content/favicon...')
+#3 /var/www/belief-hope/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/belief-hope/backend/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/backend/content/favicon.ico
+---
+2014/01/03 18:38:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "favicon.ico".' in /var/www/belief-hope/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/belief-hope/framework/web/CController.php(270): CController->missingAction('favicon.ico')
+#1 /var/www/belief-hope/framework/web/CWebApplication.php(282): CController->run('favicon.ico')
+#2 /var/www/belief-hope/framework/web/CWebApplication.php(141): CWebApplication->runController('photoalbum/favi...')
+#3 /var/www/belief-hope/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/belief-hope/backend/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/backend/photoalbum/favicon.ico
+---
+2014/01/03 18:38:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "favicon.ico".' in /var/www/belief-hope/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/belief-hope/framework/web/CController.php(270): CController->missingAction('favicon.ico')
+#1 /var/www/belief-hope/framework/web/CWebApplication.php(282): CController->run('favicon.ico')
+#2 /var/www/belief-hope/framework/web/CWebApplication.php(141): CWebApplication->runController('photoalbum/favi...')
+#3 /var/www/belief-hope/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/belief-hope/backend/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/backend/photoalbum/favicon.ico
+---

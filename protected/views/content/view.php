@@ -15,7 +15,7 @@
         if (isset($category))
             echo "<h5>
                     <i class='fa fa-bookmark'></i>
-                    <span><?= Yii::t('common', 'category') . ': ' . $category ?></span>
+                    <span>" . Yii::t('common', 'category') . ": " . $category . "</span>
                    </h5>";
         ?>
     </div>

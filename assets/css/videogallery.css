@@ -1,23 +1,23 @@
-.album {
+.video {
     margin: 15px 0;
 }
 
 /* --- Link configuration that contains the image and label ----------------------------- */
-.album a {
+.video a {
     display: block;
     position: relative;
 }
 
-.album a img {
+.video a img {
     position: relative;
 }
 
 /* --- Label configuration -------------------------------------------------------------- */
-.album a span {
+.video a span {
     font-size: 1.2em;
     font-weight: bold;
     height: 100%;
-    padding-top: 120px;
+    padding-top: 40px;
     position: absolute;
     text-align: center;
     text-decoration: none;
@@ -25,7 +25,7 @@
     z-index: 100;
 }
 
-.album a span em {
+.video a span em {
     font-size: 0.45em;
     font-weight: normal;
 }
@@ -40,4 +40,3 @@
 .dark-background em {
     color: #ccc;
 }
-

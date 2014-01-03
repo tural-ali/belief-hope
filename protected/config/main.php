@@ -38,9 +38,9 @@ return array(
             'coreScriptPosition' => CClientScript::POS_END),
         //define the class and its missingTranslation event
 
-        'request' => array(
+/*        'request' => array(
             'baseUrl' => '/',
-        ),
+        ),*/
         'assetManager' => array(
             'basePath' => realpath(dirname(__FILE__) . '/../../temp'),
             'baseUrl' => '/temp',
@@ -58,12 +58,13 @@ return array(
             'showScriptName' => false,
             'caseSensitive' => false,
             'rules' => array(
-                '<timestamp:\d+>/<slug:[\w\W]{0,}>' => 'content/view',
+                '<language:(az|ru|en)>/<controller:\w+>/<action:\w+>/page/<page:\d+>' => '<controller>/<action>',
                 '<language:(az|ru|en)>/<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
+                '<slug:[\w\W]{0,}>/<timestamp:\d+>' => 'content/view',
+                '<language:(az|ru|en)>/<controller:\w+>/<id:\d+>' => '<controller>/view',
                 '<language:(az|ru|en)>/<controller:\w+>/<action:\w+>' => '<controller>/<action>',
                 '<language:(az|ru|en)>/<token:[\w\W]{0,}>' => 'site/<token>',
                 '<language:(az|ru|en)>/' => 'site/index',
-                '<language:(az|ru|en)>/<controller:\w+>/<id:\d+>' => '<controller>/view',
                 '<language:(az|ru|en)>/<controller:\w+>/<action:\w+>/*' => '<controller>/<action>',
             ),
         ),
@@ -108,6 +109,7 @@ return array(
         // this is used in contact page
         'adminEmail' => 'mail@tural.us',
         'wsurl' => "http://" . $_SERVER['HTTP_HOST'],
+        'blogPerPage' => 3,
         'languages' => array('az' => 'az', 'ru' => 'ru', 'en' => "en")
     ),
 );

@@ -43,7 +43,7 @@ if (!isset($_SESSION)) {
     <div id="head-con">
         <div id="header">
             <div id="logo">
-                <a href="index.html"><img src="/assets/img/logo.png" alt=""></a>
+                <a href="/"><img src="/assets/img/logo.png" alt=""></a>
                 <?
                 $this->widget('application.widgets.LanguageSelector');
                 ?>
@@ -60,6 +60,24 @@ if (!isset($_SESSION)) {
     <div class="push"></div>
 </div>
 
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=turalaliyev"></script>
+<script type="text/javascript">
+    addthis.layers({
+        'theme': 'transparent',
+        'share': {
+            'position': 'left',
+            'numPreferredServices': 5
+        },
+        'follow': {
+            'services': [
+                {'service': 'twitter', 'id': 'belief_and_hope'},
+                {'service': 'youtube', 'id': 'beliefandhopedotcom'}
+            ]
+        },
+        'whatsnext': {},
+        'recommended': {}
+    });
+</script>
 
 <div id="footer">
     <div id="ftlogo"></div>

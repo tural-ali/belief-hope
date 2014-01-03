@@ -17,7 +17,7 @@ class Navigation
         $criteria->limit = 1;
         $result = Slug::model()->find($criteria);
         $timestamp = strtotime($result->createdAt);
-        return Yii::app()->params["wsurl"] . "/$timestamp/$result->slug";
+        return Yii::app()->params["wsurl"] . "/$result->slug/$timestamp";
     }
 
 } 

@@ -58,7 +58,7 @@ class PhotogalleryController extends Controller
     public function actionAlbum()
     {
         $id = Yii::app()->request->getParam('id');
-        $this->render('//layouts/simple', array("content" => $this->generateGallery($id)));
+        $this->render('album', array("content" => $this->generateGallery($id)));
     }
 
 
@@ -66,7 +66,7 @@ class PhotogalleryController extends Controller
     {
 
         $title = Photoalbum::model()->findByPk($id)->{"name_" . Yii::app()->language};
-        $html = "<center><h2>$title</h2></center>";
+        $html = "<center><h2 class='heading'>$title</h2></center>";
         $criteria = new CDbCriteria();
         $criteria->compare("albumID", $id);
         $results = Photo::model()->findAll($criteria);
@@ -85,7 +85,7 @@ class PhotogalleryController extends Controller
             if (Yii::app()->request->isAjaxRequest)
                 echo $error['message'];
             else
-                $this->render('error', $error);
+                $this->renderPartial('//layouts/simple', $error);
         }
     }
 
