@@ -91,15 +91,39 @@
 
             </div>
             <div style="min-height: 124px;" class="tab-pane" id="tab5">
-                <?php echo $form->labelEx($model, 'videoID');
-                $cList = CHtml::listData(Video::model()->findAll(array('order' => 'title_az ASC')), 'id', 'title_az');
-                $options = array(
-                    'tabindex' => '0',
-                    'empty' => 'Birini seçin',
-                );
-                echo $form->dropDownList($model, 'videoID', $cList, $options);
-                echo $form->error($model, 'videoID');
+                <script>
+                    var contentID =<?=$id?>;
+                </script>
+                <?php
+                $videoModel = new Video('search');
+                $this->widget('zii.widgets.grid.CGridView', array(
+                    'id' => 'video-grid',
+                    'beforeAjaxUpdate' => "beforeAjax",
+                    "enableSorting" => false,
+                    'afterAjaxUpdate' => "afterAjax",
+                    'dataProvider' => $videoModel->search(),
+                    'template' => '{pager}{items}{pager}',
+                    'itemsCssClass' => 'table table-striped table-bordered table-hover',
+                    'filter' => $videoModel,
+                    'columns' => array(
+                        array(
+                            'class' => 'CCheckBoxColumn',
+                            'id' => "vcb",
+                            'selectableRows' => 2,
+                            'checked' => '$data->checkIfContentHasVideo(' . $id . ', $data->id)',
+                            'checkBoxHtmlOptions' => array(
+                                'class' => 'videos',
+                            ),
+                            'value' => '$data->id',
+                        ),
+                        array(
+                            "filter" => false,
+                            'name' => 'title_az'
+                        )
+                    ),
+                ));
                 ?>
+
                 <br/>
 
                 <button data-href="/backend/video/create" class="create btn green">
@@ -111,9 +135,15 @@
             </div>
             <div style="min-height: 124px;" class="tab-pane" id="tab6">
 
-                <?php echo $form->labelEx($model, 'image'); ?>
-                <?php echo $form->fileField($model, 'image'); ?>
-                <?php echo $form->error($model, 'image'); ?>
+                <?
+                if (!is_null($model->imgUrl))
+                    echo "<img style='height: 400px' src='$model->imgUrl' />";
+
+
+                echo $form->labelEx($model, 'image');
+                echo $form->fileField($model, 'image');
+                echo $form->error($model, 'image');
+                ?>
 
 
             </div>

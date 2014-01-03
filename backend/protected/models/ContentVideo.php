@@ -1,54 +1,40 @@
 <?php
 
 /**
- * This is the model class for table "Video".
+ * This is the model class for table "ContentVideo".
  *
- * The followings are the available columns in table 'Video':
+ * The followings are the available columns in table 'ContentVideo':
  * @property string $id
- * @property string $url
+ * @property string $contentID
  * @property string $videoID
- * @property string $title_az
- * @property string $title_ru
- * @property string $title_en
  *
  * The followings are the available model relations:
- * @property Content[] $contents
+ * @property Video $video
+ * @property Content $content
  */
-class Video extends CActiveRecord
+class ContentVideo extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'Video';
+		return 'ContentVideo';
 	}
 
-
-
-    public function checkIfContentHasVideo($contentID, $videoID)
-    {
-        $criteria = new CDbCriteria;
-        $criteria->compare('contentID', $contentID);
-        $criteria->compare('videoID', $videoID);
-        $result = ContentVideo::model()->count($criteria);
-        return ($result > 0) ? true : false;
-
-    }
-
-
-
+	/**
+	 * @return array validation rules for model attributes.
+	 */
 	public function rules()
 	{
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('url, title_az', 'required'),
-			array('url, title_az, title_ru, title_en', 'length', 'max'=>255),
-			array('videoID', 'length', 'max'=>100),
+			array('contentID, videoID', 'required'),
+			array('contentID, videoID', 'length', 'max'=>10),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, url, videoID, title_az, title_ru, title_en', 'safe', 'on'=>'search'),
+			array('id, contentID, videoID', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -60,7 +46,8 @@ class Video extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-            'contentVideos' => array(self::HAS_MANY, 'ContentVideo', 'videoID'),
+			'video' => array(self::BELONGS_TO, 'Video', 'videoID'),
+			'content' => array(self::BELONGS_TO, 'Content', 'contentID'),
 		);
 	}
 
@@ -71,11 +58,8 @@ class Video extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'url' => 'Link',
+			'contentID' => 'Content',
 			'videoID' => 'Video',
-			'title_az' => 'Videonun adı',
-			'title_ru' => 'Название',
-			'title_en' => 'Title',
 		);
 	}
 
@@ -98,11 +82,8 @@ class Video extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id,true);
-		$criteria->compare('url',$this->url,true);
+		$criteria->compare('contentID',$this->contentID,true);
 		$criteria->compare('videoID',$this->videoID,true);
-		$criteria->compare('title_az',$this->title_az,true);
-		$criteria->compare('title_ru',$this->title_ru,true);
-		$criteria->compare('title_en',$this->title_en,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -113,7 +94,7 @@ class Video extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Video the static model class
+	 * @return ContentVideo the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

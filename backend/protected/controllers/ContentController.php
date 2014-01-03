@@ -19,11 +19,7 @@ class ContentController extends Controller
         );
     }
 
-    /**
-     * Specifies the access control rules.
-     * This method is used by the 'accessControl' filter.
-     * @return array access control rules
-     */
+
     public function accessRules()
     {
         return array(
@@ -32,7 +28,7 @@ class ContentController extends Controller
                 'users' => array('*'),
             ),
             array('allow', // allow authenticated user to perform 'create' and 'update' actions
-                'actions' => array('create', 'update'),
+                'actions' => array('create', 'update', 'AddVideo'),
                 'users' => array('@'),
             ),
             array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -45,10 +41,30 @@ class ContentController extends Controller
         );
     }
 
-    /**
-     * Displays a particular model.
-     * @param integer $id the ID of the model to be displayed
-     */
+    public function actionAddVideo()
+    {
+        $uncheckedVideos = isset($_POST["uncheckedVideos"]) ? $_POST["uncheckedVideos"] : false;
+        if (isset($_POST["checkedVideos"]) && is_array($_POST["checkedVideos"]) && count($_POST["checkedVideos"]) > 0)
+            foreach ($_POST["checkedVideos"] as $video) {
+                $criteria = new CDbCriteria();
+                $criteria->compare("videoID", (int)$video);
+                $criteria->compare("contentID", (int)$_POST["contentID"]);
+                $model = ContentVideo::model()->find($criteria);
+                if (!$model)
+                    $model = new ContentVideo;
+                $model->videoID = $video;
+                $model->contentID = $_POST["contentID"];
+                $model->save();
+            }
+        if (is_array($uncheckedVideos) && count($uncheckedVideos) > 0) {
+            $criteria = new CDbCriteria();
+            $criteria->compare("contentID", (int)$_POST["contentID"]);
+            $criteria->addInCondition('videoID', $uncheckedVideos);
+            ContentVideo::model()->deleteAll($criteria);
+        }
+        echo "done";
+    }
+
     public function actionView($id)
     {
         $this->render('view', array(
@@ -79,8 +95,6 @@ class ContentController extends Controller
 
             if (empty($_POST["Content"]["albumID"]))
                 $model->albumID = null;
-            if (empty($_POST["Content"]["videoID"]))
-                $model->videoID = null;
             if (empty($_POST["Content"]["catID"]))
                 $model->catID = null;
 
@@ -102,7 +116,8 @@ class ContentController extends Controller
             }
         }
         $params = array(
-            'model' => $model
+            'model' => $model,
+            'id' => $model->id
         );
         if (!is_null($model->catID))
             $params["cats"] = $this->generateCategories(0, $model->catID);
@@ -127,8 +142,6 @@ class ContentController extends Controller
             $model->attributes = $_POST['Content'];
             if ($_POST["Content"]["albumID"] == "")
                 $model->albumID = Null;
-            if ($_POST["Content"]["videoID"] == "")
-                $model->videoID = Null;
 
             if ($model->save()) {
                 $blogID = $model->primaryKey;
@@ -144,7 +157,7 @@ class ContentController extends Controller
                         );
 
                 }
-                $this->redirect(array('admin'));
+                $this->redirect(array('update', 'id' => $blogID));
             }
         }
 

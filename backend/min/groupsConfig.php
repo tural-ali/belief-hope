@@ -135,6 +135,10 @@ $js = array(
         $path["plug-ins"] . "respond.min.js"
     ),
 
+    "content_create&update" => array(
+        $pathJS["pages"] . "content/create.js"
+    ),
+
     'user_login' => array(
         $path["plug-ins"] . "jquery-validation/dist/jquery.validate.min.js",
         $path["plug-ins"] . 'backstretch/jquery.backstretch.min.js',
@@ -193,7 +197,7 @@ return array(
     'content_create_js' => array_merge($js["core_plugins"], $js["crud_create"]),
     'content_create_css' => array_merge($css["mandatory"], $css["fixes"]),
 
-    'content_update_js' => array_merge($js["core_plugins"], $js["crud_update"]),
+    'content_update_js' => array_merge($js["core_plugins"], $js["crud_update"], $js["content_create&update"]),
     'content_update_css' => array_merge($css["mandatory"], $css["fixes"]),
 
     'photoalbum_admin_js' => array_merge($js["core_plugins"], $js["crud_admin"]),
@@ -215,11 +219,6 @@ return array(
     'photo_update_js' => array_merge($js["core_plugins"], $js["crud_update"]),
     'photo_update_css' => array_merge($css["mandatory"], $css["fixes"]),
 
-    'photo_admin_js' => array_merge($js["core_plugins"], $js["crud_admin"]),
-    'photo_admin_css' => array_merge($css["mandatory"], $css["fixes"]),
-
-    'photo_create_js' => array_merge($js["core_plugins"], $js["crud_create"]),
-    'photo_create_css' => array_merge($css["mandatory"], $css["fixes"]),
 
     'dictionary_admin_js' => array_merge($js["core_plugins"], $js["crud_admin"]),
     'dictionary_admin_css' => array_merge($css["mandatory"], $css["fixes"]),

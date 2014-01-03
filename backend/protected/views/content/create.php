@@ -26,7 +26,6 @@
             <li class=""><a href="#tab3" data-toggle="tab">Ru</a></li>
             <li class=""><a href="#tab6" data-toggle="tab">Əsas Şəkil</a></li>
             <li class=""><a href="#tab4" data-toggle="tab">Foto-albom</a></li>
-            <li class=""><a href="#tab5" data-toggle="tab">Video</a></li>
 
         </ul>
         <div class="tab-content">
@@ -85,25 +84,7 @@
 
 
             </div>
-            <div style="min-height: 124px;" class="tab-pane" id="tab5">
-                <?php echo $form->labelEx($model, 'videoID');
-                $cList = CHtml::listData(Video::model()->findAll(array('order' => 'title_az ASC')), 'id', 'title_az');
-                $options = array(
-                    'tabindex' => '0',
-                    'empty' => 'Birini seçin',
-                );
-                echo $form->dropDownList($model, 'videoID', $cList, $options);
-                echo $form->error($model, 'videoID');
-                ?>
-                <br/>
 
-                <button data-href="/backend/video/create" class="create btn green">
-                    Yeni video
-                    <i class="icon-plus"></i>
-                </button>
-
-
-            </div>
             <div style="min-height: 124px;" class="tab-pane" id="tab6">
 
                 <?php echo $form->labelEx($model, 'image'); ?>

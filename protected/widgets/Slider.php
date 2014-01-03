@@ -18,8 +18,8 @@ class Slider extends CWidget
         $currentLang = Yii::app()->language;
         $results = Slideshow::model()->findAll($criteria);
         if (count($results) > 0) {
-            $html = "<div id='carousel' class='carousel slide carousel - fade'>
-            <ol>";
+            $html = "<div id='carousel' class='carousel carousel-fade'>
+            <ol class='carousel-indicators'>";
 
             for ($counter = 0; $counter < count($results); $counter++) {
                 $html .= "<li data-target='#carousel' data-slide-to='$counter' class='active'></li>";
@@ -31,14 +31,8 @@ class Slider extends CWidget
             foreach ($results as $result) {
                 $class = ($counter == 0) ? "active" : "";
                 $html .= "
-                    <div data-href='" . $result->
-                        {
-                        "url_" . $currentLang
-                        }
-
-                    .
-                    "' class='item $class'>
-                        <img src='/$result->imgUrl'>
+                    <div data-href='" . $result->{"url_" . $currentLang} . "' class='item slide $class'>
+                        <img src='$result->imgUrl'>
 
                         <div class='slider-con'>
                             <div class='sli-con'>
