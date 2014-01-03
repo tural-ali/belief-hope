@@ -105,6 +105,8 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
+
+        $_GET['language'] = Yii::app()->language;
         $this->layout = "contentlist";
         $criteria = new CDbCriteria();
         $criteria->order = 'id DESC';

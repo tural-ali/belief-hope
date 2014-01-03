@@ -8,7 +8,6 @@ class Navigation extends CWidget
         $currentLang = Yii::app()->language;
         $temp = Yii::app()->controller->action->id;
         $token = ($temp) ? $temp : "home";
-        Debug::fb($temp);
         $nav = $this->generateNav($token);
         $this->render('Navigation', array('currentLang' => $currentLang, 'html' => $nav));
     }
