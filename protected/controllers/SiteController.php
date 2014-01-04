@@ -146,7 +146,7 @@ class SiteController extends Controller
 
                 $html .= "<div class='context'>";
                 $html .= "<div class='con-left'>
-        <h1>" . $blogpost->{'title_' . $lang} . "</h1>
+        <h1><a href='/$slug->slug/" . strtotime($slug->createdAt) . "'>" . $blogpost->{'title_' . $lang} . "</a></h1>
     </div>
         <div class='clear'></div>
     <div class='con-data-cat'>

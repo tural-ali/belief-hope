@@ -17,7 +17,7 @@
 
         <?
         if (isset($imgUrl))
-            echo "<img src='$imgUrl' alt=''/>";
+            echo "<center><img class='cover-photo' src='$imgUrl' alt=''/></center>";
         echo $content;
         ?>
     </div>
@@ -26,7 +26,7 @@
 
 <?
 if (isset($videoHtml))
-    echo "<div class='videos'><h1>Videolar</h1>" . $videoHtml . "</div>";
+    echo "<div class='videos'><h1>" . Yii::t("common", "photos") . "</h1>" . $videoHtml . "</div>";
 
 
 
@@ -37,7 +37,7 @@ if (isset($videoHtml))
 if (isset($galleryHtml))
     echo "<img src='/assets/img/line.png'/>
     <div class='photos'>
-    <h1>Fotolar</h1>" . $galleryHtml . "</div>";
+    <h1>" . Yii::t("common", "photos") . "</h1>" . $galleryHtml . "</div>";
 
 ?>
 
