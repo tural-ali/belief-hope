@@ -9,6 +9,7 @@ $(document).ready(function () {
         return false;
     });
 
+
     addthis.layers({
         'theme': 'transparent',
         'share': {
@@ -20,12 +21,9 @@ $(document).ready(function () {
                 {'service': 'twitter', 'id': 'belief_and_hope'},
                 {'service': 'youtube', 'id': 'beliefandhopedotcom'}
             ]
-        },
-        'whatsnext': {},
-        'recommended': {}
+        }
     });
 
-    var addthis_config = {"data_track_addressbar": true};
 
 });
 
