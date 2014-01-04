@@ -36,7 +36,7 @@ class Slideshow extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('title_az, imgUrl, text_az, url_az', 'required'),
+			array('title_az, imgUrl, url_az', 'required'),
 			array('sort', 'numerical', 'integerOnly'=>true),
 			array('title_az, title_en, title_ru, imgUrl, url_az, url_en, url_ru', 'length', 'max'=>255),
 			array('text_az, text_en, text_ru', 'length', 'max'=>150),

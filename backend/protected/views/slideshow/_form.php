@@ -62,10 +62,13 @@
         </div>
     </div>
     <!--END TABS-->
-
-    <?php echo $form->labelEx($model, 'image'); ?>
-    <?php echo $form->fileField($model, 'image'); ?>
-    <?php echo $form->error($model, 'image'); ?>
+    <?
+    if (!is_null($model->imgUrl))
+        echo "<img style='height: 400px' src='$model->imgUrl' />";
+    echo $form->labelEx($model, 'image');
+    echo $form->fileField($model, 'image');
+    echo $form->error($model, 'image');
+    ?>
 
 
     <div class="buttons">
