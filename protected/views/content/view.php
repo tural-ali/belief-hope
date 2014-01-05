@@ -26,7 +26,7 @@
 
 <?
 if (isset($videoHtml))
-    echo "<div class='videos'><h1>" . Yii::t("common", "photos") . "</h1>" . $videoHtml . "</div>";
+    echo "<div class='videos'><h1>" . Yii::t("common", "videos") . "</h1>" . $videoHtml . "</div>";
 
 
 
