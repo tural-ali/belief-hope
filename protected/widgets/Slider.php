@@ -22,8 +22,8 @@ class Slider extends CWidget
             <ol class='carousel-indicators'>";
 
             for ($counter = 0; $counter < count($results); $counter++) {
-                $html .= "<li data-target='#carousel' data-slide-to='$counter' class='active'></li>";
-
+                $class = ($counter == 0) ? "active" : "";
+                $html .= "<li data-target='#carousel' data-slide-to='$counter' class='$class'></li>";
             }
             $html .= "</ol>
             <div class='carousel-inner'>";
