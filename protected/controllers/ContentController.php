@@ -7,14 +7,16 @@ class ContentController extends Controller
 
     public function actionView()
     {
+        $slugHash = substr(md5(Yii::app()->request->getParam('slug')), -5);
         $timestamp = date('Y-m-d H:i:s', Yii::app()->request->getParam('timestamp'));
         $currentLang = Yii::app()->language;
         $criteria = new CDbCriteria();
         $criteria->compare('createdAt', $timestamp);
-        $criteria->compare('lang', $currentLang);
+        $criteria->compare("hash", $slugHash);
         $criteria->limit = 1;
         $result = Slug::model()->find($criteria);
         if ($result) {
+            Yii::app()->language=$result->lang;
             $criteria = new CDbCriteria();
             $criteria->compare('id', $result->blogID);
             $blogpost = Content::model()->find($criteria);
