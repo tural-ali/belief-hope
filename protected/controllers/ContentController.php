@@ -9,7 +9,6 @@ class ContentController extends Controller
     {
         $slugHash = substr(md5(Yii::app()->request->getParam('slug')), -5);
         $timestamp = date('Y-m-d H:i:s', Yii::app()->request->getParam('timestamp'));
-        $currentLang = Yii::app()->language;
         $criteria = new CDbCriteria();
         $criteria->compare('createdAt', $timestamp);
         $criteria->compare("hash", $slugHash);
@@ -17,6 +16,7 @@ class ContentController extends Controller
         $result = Slug::model()->find($criteria);
         if ($result) {
             Yii::app()->language=$result->lang;
+            $currentLang = Yii::app()->language;
             $criteria = new CDbCriteria();
             $criteria->compare('id', $result->blogID);
             $blogpost = Content::model()->find($criteria);
