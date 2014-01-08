@@ -39,13 +39,8 @@ $actionName = Yii::app()->controller->action->id;
 
 <div id="footer">
     <div id="ftlogo"></div>
-    <p>
-        <i class="fa fa-facebook-square"></i>
-        <i class="fa fa-envelope-o"></i>
-        <i class="fa fa-youtube-square"></i>
-    </p>
 
-    <p>All Rights Reserved &copy; 2013</p>
+    <p>All Rights Reserved &copy; 2013 - <?= date("Y"); ?></p>
 </div>
 
 

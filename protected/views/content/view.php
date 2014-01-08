@@ -17,7 +17,10 @@
 
         <?
         if (isset($imgUrl))
-            echo "<center><img class='cover-photo' src='$imgUrl' alt=''/></center>";
+            if ($actionName == "events" || $actionName == "charity")
+                echo "<center><img class='cover-photo landscape' src='$imgUrl' alt=''/></center>";
+            else
+                echo "<img class='cover-photo portrait' src='$imgUrl' alt=''/>";
         echo $content;
         ?>
     </div>

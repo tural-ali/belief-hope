@@ -611,11 +611,19 @@ body {
 }
 
 .ReadableText .cover-photo {
-    width: 650px;
     margin-bottom: 20px;
     border-radius: 5px;
     border: 5px solid #fff;
     box-shadow: 1px 1px 4px #666;
+}
+
+.landscape {
+    width: 650px;
+}
+
+.portrait {
+    width: 250px;
+    float: left;
 }
 
 .white-trans-border {
