@@ -23,6 +23,7 @@ html, body {
 
 body {
     background: url("/assets/img/clouds.jpg") bottom;
+    background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
