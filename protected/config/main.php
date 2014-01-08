@@ -82,7 +82,7 @@ return array(
         ),
 
         'errorHandler' => array(
-            'errorAction' => 'dashboard/error',
+            'errorAction' => 'site/error',
         ),
 
         'log' => array(

@@ -16,6 +16,7 @@
     <div class="ReadableText">
 
         <?
+        $actionName = Yii::app()->controller->action->id;
         if (isset($imgUrl))
             if ($actionName == "events" || $actionName == "charity")
                 echo "<center><img class='cover-photo landscape' src='$imgUrl' alt=''/></center>";
