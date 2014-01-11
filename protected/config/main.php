@@ -108,7 +108,7 @@ return array(
         // this is used in contact page
         'adminEmail' => 'mail@tural.us',
         'wsurl' => "http://" . $_SERVER['HTTP_HOST'],
-        'blogPerPage' => 5,
+        'blogPerPage' => 7,
         'languages' => array('az' => 'az', 'ru' => 'ru')
     ),
 );
