@@ -154,7 +154,7 @@ class SiteController extends Controller
                 <i class='fa fa-calendar'></i> " . date('d.m.Y', $timestamp) . "
             </span>
              <span class='pull-right'>
-                <i class='fa fa-bookmark'></i> " . Yii::t('common', 'category') . ":" . $blogpost->cat->{'title_' . $lang} . "
+                <i class='fa fa-bookmark'></i> " . Yii::t('common', 'category') . ": <a href='/$lang/" . $blogpost->cat->token . "'>" . $blogpost->cat->{'title_' . $lang} . "</a>
              </span>
     </div>
     <div class='clear'></div>
