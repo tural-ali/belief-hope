@@ -7,7 +7,10 @@ $actionName = Yii::app()->controller->action->id;
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <link
+        href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic&subset=latin,cyrillic-ext,latin-ext,cyrillic'
+        rel='stylesheet' type='text/css'>
     <link href="/min/?g=<?= $controllerName ?>_<?= $actionName ?>_css" rel="stylesheet">
     <!--[if IE]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -33,8 +36,8 @@ $actionName = Yii::app()->controller->action->id;
             <?
             $this->widget('application.widgets.Navigation');
             ?>
-			
-			<div class="social-bar"><br>
+
+            <div class="social-bar"><br>
                 <a class="webicon facebook small" href="https://www.facebook.com/beliefandhopedotcom"></a>
                 <a class="webicon twitter small" href="https://twitter.com/belief_and_hope"></a>
                 <a class="webicon youtube small" href="https://www.youtube.com/user/beliefandhopedotcom"></a>
