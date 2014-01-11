@@ -33,8 +33,8 @@ $actionName = Yii::app()->controller->action->id;
             <?
             $this->widget('application.widgets.Navigation');
             ?>
-            <div class="social-bar">
-                <span><?=Yii::t("common", "social networks")?>:</span>
+			
+			<div class="social-bar"><br>
                 <a class="webicon facebook small" href="https://www.facebook.com/beliefandhopedotcom"></a>
                 <a class="webicon twitter small" href="https://twitter.com/belief_and_hope"></a>
                 <a class="webicon youtube small" href="https://www.youtube.com/user/beliefandhopedotcom"></a>

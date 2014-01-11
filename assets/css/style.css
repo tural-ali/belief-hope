@@ -56,7 +56,7 @@ body {
 }
 
 #wrap {
-    width: 1300px;
+    width: 1200px;
     min-height: 100%;
     height: auto !important;
     height: 100%;
@@ -81,7 +81,7 @@ body {
 
 #header {
     height: 200px;
-    width: 1280px;
+    width: 1180px;
     margin: 0 auto;
 }
 
@@ -109,10 +109,11 @@ body {
 }
 
 .social-bar {
+    width: 200px;
     float: right;
     color: #fff;
-    margin-top: 20px;
     margin-right: 10px;
+    text-align: right;
 }
 
 .social-bar span {
@@ -417,7 +418,7 @@ a.category-link:hover {
 #footer {
     width: 100%;
     height: 190px;
-    min-width: 1300px;
+    min-width: 1200px;
     background: url("/assets/img/black.png");
     border-top: 4px solid #666;
     text-align: center;

@@ -37,7 +37,7 @@ class Content extends CActiveRecord
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('title_az, content_az, catID', 'required'),
+            array('title_az, content_az', 'required'),
             array(
                 'image', 'file',
                 'types' => 'jpg, gif, png, jpeg',
