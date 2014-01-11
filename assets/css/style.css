@@ -122,7 +122,6 @@ body {
     font-weight: bold;
 }
 
-
 #lang a {
     color: #fff;
     font-size: 16px;
@@ -275,11 +274,21 @@ body {
     color: #333;
 }
 
+.category-link a {
+    color: #333;
+    text-decoration: underline;
+}
+
+.category-link a:hover {
+    color: #000;
+    text-decoration: none;
+}
+
 .blogpost {
     padding-bottom: 5px;
 }
 
-.context:nth-child(10) {
+.context:nth-child(12) {
     background: none;
 }
 
