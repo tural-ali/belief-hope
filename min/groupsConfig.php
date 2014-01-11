@@ -17,6 +17,7 @@ $css = array(
     'mandatory' => array(
         $pathCSS["root"] . "font-awesome.min.css",
         $pathCSS["root"] . "bootstrap.min.css",
+        $path["plug-ins"] . "webicons-master/webicons.css",
         $pathCSS["root"] . "style.css"
     ),
     "site_index" => array(),
@@ -40,6 +41,7 @@ $js = array(
         $pathJS["mandatory"] . "jquery-1.10.1.min.js",
         $pathJS["mandatory"] . "jquery-migrate-1.2.1.min.js",
         $pathJS["mandatory"] . "bootstrap.min.js",
+        $pathJS["mandatory"] . "modernizr.js",
         $pathJS["root"] . "initialize.js",
     ),
     "site_index" => array(),

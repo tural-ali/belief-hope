@@ -28,6 +28,11 @@ $actionName = Yii::app()->controller->action->id;
                 <?
                 $this->widget('application.widgets.LanguageSelector');
                 ?>
+                <div class="social-bar">
+                    <a class="webicon facebook small" href="#"></a>
+                    <a class="webicon twitter small" href="#"></a>
+                    <a class="webicon youtube small" href="#"></a>
+                </div>
             </div>
 
             <?

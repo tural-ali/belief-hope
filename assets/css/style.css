@@ -102,10 +102,22 @@ body {
     position: relative;
     top: -40px;
     left: 130px;
+    width: 100px;
     color: #ff6600;
     font-size: 16px;
     font-weight: bold;
 }
+
+.social-bar {
+    position: relative;
+    top: -40px;
+    left: 250px;
+    color: #ff6600;
+    height: 25px;
+    width: 150px;
+}
+
+
 
 #lang a {
     color: #fff;
