@@ -17,6 +17,7 @@
 
         <?
         $actionName = Yii::app()->controller->action->id;
+        Debug::fb($actionName);
         if (isset($imgUrl))
             if ($actionName == "events" || $actionName == "charity")
                 echo "<img class='cover-photo portrait' src='$imgUrl' alt=''/>";
