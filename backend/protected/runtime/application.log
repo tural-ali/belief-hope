@@ -541,3 +541,119 @@ Stack trace:
 REQUEST_URI=/backend/content/addvideo/
 in /var/www/belief-hope/backend/protected/controllers/ContentController.php (51)
 in /var/www/belief-hope/backend/index.php (13)
+2014/01/06 21:41:13 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/bh/public_html/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /home/bh/public_html/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /home/bh/public_html/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/bh/public_html/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /home/bh/public_html/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /home/bh/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/bh/public_html/framework/web/CController.php(291): CFilterChain->run()
+#6 /home/bh/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/bh/public_html/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /home/bh/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('content/admin')
+#9 /home/bh/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /home/bh/public_html/backend/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/backend/content/admin
+HTTP_REFERER=http://beliefandhope.com/backend/dashboard/index
+---
+2014/01/06 21:41:18 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/bh/public_html/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /home/bh/public_html/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /home/bh/public_html/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/bh/public_html/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /home/bh/public_html/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /home/bh/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/bh/public_html/framework/web/CController.php(291): CFilterChain->run()
+#6 /home/bh/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/bh/public_html/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /home/bh/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('content/admin')
+#9 /home/bh/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /home/bh/public_html/backend/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/backend/content/admin
+---
+2014/01/06 21:41:30 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/bh/public_html/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /home/bh/public_html/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /home/bh/public_html/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/bh/public_html/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /home/bh/public_html/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /home/bh/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/bh/public_html/framework/web/CController.php(291): CFilterChain->run()
+#6 /home/bh/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/bh/public_html/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /home/bh/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('content/admin')
+#9 /home/bh/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /home/bh/public_html/backend/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/backend/content/admin
+HTTP_REFERER=http://beliefandhope.com/backend/
+---
+2014/01/06 21:42:07 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/bh/public_html/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /home/bh/public_html/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /home/bh/public_html/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/bh/public_html/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /home/bh/public_html/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /home/bh/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/bh/public_html/framework/web/CController.php(291): CFilterChain->run()
+#6 /home/bh/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/bh/public_html/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /home/bh/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('content/admin')
+#9 /home/bh/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /home/bh/public_html/backend/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/backend/content/admin
+---
+2014/01/06 21:42:57 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/bh/public_html/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /home/bh/public_html/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /home/bh/public_html/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/bh/public_html/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /home/bh/public_html/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /home/bh/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/bh/public_html/framework/web/CController.php(291): CFilterChain->run()
+#6 /home/bh/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/bh/public_html/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /home/bh/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('request/admin')
+#9 /home/bh/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /home/bh/public_html/backend/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/backend/request/admin
+HTTP_REFERER=http://beliefandhope.com/backend/
+---
+2014/01/06 21:43:51 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/bh/public_html/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /home/bh/public_html/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /home/bh/public_html/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/bh/public_html/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /home/bh/public_html/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /home/bh/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/bh/public_html/framework/web/CController.php(291): CFilterChain->run()
+#6 /home/bh/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/bh/public_html/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /home/bh/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('content/admin')
+#9 /home/bh/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /home/bh/public_html/backend/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/backend/content/admin
+---
+2014/01/06 21:45:08 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/bh/public_html/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /home/bh/public_html/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /home/bh/public_html/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/bh/public_html/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /home/bh/public_html/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /home/bh/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/bh/public_html/framework/web/CController.php(291): CFilterChain->run()
+#6 /home/bh/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/bh/public_html/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /home/bh/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('content/admin')
+#9 /home/bh/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /home/bh/public_html/backend/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/backend/content/admin
+HTTP_REFERER=http://beliefandhope.com/backend/
+---

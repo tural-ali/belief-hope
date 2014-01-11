@@ -109,14 +109,18 @@ body {
 }
 
 .social-bar {
-    position: relative;
-    top: -40px;
-    left: 250px;
-    color: #ff6600;
-    height: 25px;
-    width: 150px;
+    float: right;
+    color: #fff;
+    margin-top: 20px;
+    margin-right: 10px;
 }
 
+.social-bar span {
+    line-height: 22px;
+    vertical-align: top;
+    margin-right: 5px;
+    font-weight: bold;
+}
 
 
 #lang a {
@@ -404,6 +408,7 @@ body {
 #footer {
     width: 100%;
     height: 190px;
+    min-width: 1300px;
     background: url("/assets/img/black.png");
     border-top: 4px solid #666;
     text-align: center;
