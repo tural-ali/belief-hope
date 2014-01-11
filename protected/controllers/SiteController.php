@@ -146,7 +146,7 @@ class SiteController extends Controller
 
                 $html .= "<div class='context'>";
                 $html .= "<div class='con-left'>
-        <h1><a href='/$slug->slug/" . strtotime($slug->createdAt) . "'>" . $blogpost->{'title_' . $lang} . "</a></h1>
+        <h2><a href='/$slug->slug/" . strtotime($slug->createdAt) . "'>" . $blogpost->{'title_' . $lang} . "</a></h2>
     </div>
         <div class='clear'></div>
     <div class='con-data-cat'>
@@ -160,7 +160,7 @@ class SiteController extends Controller
     <div class='clear'></div>
     <div>
     <div class='con-img'><img src='$blogpost->imgUrl' alt=''/></div>
-    <div class='con-body ReadableText'>" .
+    <div class='con-body'>" .
                     Typography::truncate(strip_tags($blogpost->{"content_" . $lang}), 500) . "
             </div>
             <div class='clear'></div>

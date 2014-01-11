@@ -250,14 +250,12 @@ body {
 }
 
 .context {
-    margin: 25px;
-    margin-bottom: 30px;
+    margin: 0 25px 10px;
     padding-bottom: 5px;
-    margin-top: 30px;
     background: url(/assets/img/line.png) bottom no-repeat;
 }
 
-.context h1 a {
+.context h2 a {
     color: #333;
 }
 
@@ -276,11 +274,7 @@ body {
     float: left;
 }
 
-.con-left h1 {
-    font-size: 27px;
-    font-weight: normal;
-    margin-left: -3px;
-    font-family: Verdana;
+.con-left h2 {
     color: #333;
     margin: 0px;
 }
@@ -353,6 +347,7 @@ body {
     margin-left: 220px;
     font-size: 15px !important;
     font-family: Verdana;
+    text-rendering: optimizeLegibility;
 }
 
 .con-img {
