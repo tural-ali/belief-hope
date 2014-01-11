@@ -29,8 +29,8 @@ class ContentController extends Controller
 
             if (!is_null($blogpost->catID)) {
                 $data["category"] = $blogpost->cat->{'title_' . $currentLang};
-                $data["catID"] = $blogpost->catID;
             }
+            $data["catID"] = $blogpost->catID;
             $data["videoHtml"] = $this->generateVideoHtml($blogpost->id);
             if (!is_null($blogpost->albumID))
                 $data["galleryHtml"] = $this->generateGallery($blogpost->albumID);

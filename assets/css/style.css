@@ -96,12 +96,17 @@ body {
 
 #logo {
     float: left;
+    padding: 5px 0 0 0;
+}
+
+#logo img {
+    width: 350px;
 }
 
 #lang {
     position: relative;
-    top: -40px;
-    left: 130px;
+    top: -30px;
+    left: 110px;
     width: 100px;
     color: #ff6600;
     font-size: 16px;

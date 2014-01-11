@@ -18,12 +18,11 @@
         <?
 
         if (isset($imgUrl))
-            if (isset($catID)) {
-                if ($catID == 6 || $catID == 7)
-                    echo "<img class='cover-photo portrait' src='$imgUrl' alt=''/>";
-                else
-                    echo "<center><img class='cover-photo landscape' src='$imgUrl' alt=''/></center>";
-            }
+            if ($catID == 6 || $catID == 7 || is_null($catID))
+                echo "<img class='cover-photo portrait' src='$imgUrl' alt=''/>";
+            else
+                echo "<center><img class='cover-photo landscape' src='$imgUrl' alt=''/></center>";
+
         echo $content;
         ?>
     </div>
