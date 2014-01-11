@@ -7,7 +7,14 @@ $actionName = Yii::app()->controller->action->id;
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href="/min/?g=<?= $controllerName ?>_<?= $actionName ?>_css" rel="stylesheet">
+    <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js"></script>
+    <![endif]-->
     <title>Belief & Hope</title>
 </head>
 <body>
@@ -40,7 +47,7 @@ $actionName = Yii::app()->controller->action->id;
 <div id="footer">
     <div id="ftlogo"></div>
 
-    <p>&copy; 2013 - <?= date("Y");?>  Belief and Hope</p>
+    <p>&copy; 2013 - <?= date("Y"); ?>  Belief and Hope</p>
 </div>
 
 
