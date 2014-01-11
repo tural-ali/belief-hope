@@ -15,12 +15,6 @@ $(document).ready(function () {
         'share': {
             'position': 'left',
             'numPreferredServices': 5
-        },
-        'follow': {
-            'services': [
-                {'service': 'twitter', 'id': 'belief_and_hope'},
-                {'service': 'youtube', 'id': 'beliefandhopedotcom'}
-            ]
         }
     });
 

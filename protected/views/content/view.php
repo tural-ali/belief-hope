@@ -16,14 +16,14 @@
     <div class="ReadableText">
 
         <?
-        $actionName = Yii::app()->controller->action->id;
-        Debug::fb($actionName);
-        if (isset($imgUrl))
-            if ($actionName == "events" || $actionName == "charity")
-                echo "<img class='cover-photo portrait' src='$imgUrl' alt=''/>";
-            else
-                echo "<center><img class='cover-photo landscape' src='$imgUrl' alt=''/></center>";
 
+        if (isset($imgUrl))
+            if (isset($catID)) {
+                if ($catID == 6 || $catID == 7)
+                    echo "<img class='cover-photo portrait' src='$imgUrl' alt=''/>";
+                else
+                    echo "<center><img class='cover-photo landscape' src='$imgUrl' alt=''/></center>";
+            }
         echo $content;
         ?>
     </div>

@@ -15,7 +15,7 @@ class ContentController extends Controller
         $criteria->limit = 1;
         $result = Slug::model()->find($criteria);
         if ($result) {
-            Yii::app()->language=$result->lang;
+            Yii::app()->language = $result->lang;
             $currentLang = Yii::app()->language;
             $criteria = new CDbCriteria();
             $criteria->compare('id', $result->blogID);
@@ -27,8 +27,10 @@ class ContentController extends Controller
                 "timestamp" => date('d.m.Y', Yii::app()->request->getParam('timestamp'))
             );
 
-            if (!is_null($blogpost->catID))
+            if (!is_null($blogpost->catID)) {
                 $data["category"] = $blogpost->cat->{'title_' . $currentLang};
+                $data["catID"] = $blogpost->catID;
+            }
             $data["videoHtml"] = $this->generateVideoHtml($blogpost->id);
             if (!is_null($blogpost->albumID))
                 $data["galleryHtml"] = $this->generateGallery($blogpost->albumID);
