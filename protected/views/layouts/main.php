@@ -12,11 +12,8 @@ $actionName = Yii::app()->controller->action->id;
         href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic&subset=latin,cyrillic-ext,latin-ext,cyrillic'
         rel='stylesheet' type='text/css'>
     <link href="/min/?g=<?= $controllerName ?>_<?= $actionName ?>_css" rel="stylesheet">
-    <!--[if IE]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js"></script>
+    <!--[if lte IE 8]>
+    <link href="/assets/css/iefixes.css" rel="stylesheet">
     <![endif]-->
     <title>Belief & Hope</title>
 </head>
@@ -57,7 +54,11 @@ $actionName = Yii::app()->controller->action->id;
 
     <p>&copy; 2013 - <?= date("Y"); ?>  Belief and Hope</p>
 </div>
-
+<!--[if lte IE 8]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<script src="/assets/js/respond.min.js"></script>
+<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js"></script>
+<![endif]-->
 
 <script src="/min/?g=<?= $controllerName ?>_<?= $actionName ?>_js"></script>
 </body>

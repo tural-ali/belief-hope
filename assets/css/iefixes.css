@@ -1,0 +1,192 @@
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .input-group, .row, .content {
+    box-sizing: border-box;
+    behavior: url(/js/boxsizing.htc)
+}
+
+audio, canvas, video {
+    display: inline;
+    zoom: 1
+}
+
+html {
+    font-size: 100%
+}
+
+img {
+    width: auto;
+    height: auto;
+    -ms-interpolation-mode: bicubic
+}
+
+button, input {
+    overflow: visible
+}
+
+.container {
+    zoom: 1
+}
+
+.row {
+    zoom: 1
+}
+
+.dl-horizontal {
+    zoom: 1
+}
+
+input[type="radio"], input[type="checkbox"] {
+    margin-top: 0
+}
+
+.help-block {
+    display: inline;
+    zoom: 1
+}
+
+.form-horizontal .form-group {
+    zoom: 1
+}
+
+.dropdown-toggle {
+    margin-bottom: -3px
+}
+
+.dropdown-menu .divider {
+    width: 100%;
+    margin: -5px 0 5px
+}
+
+.list-group {
+    margin-left: 0
+}
+
+ul .list-group-item {
+    list-style: none
+}
+
+.sr-only {
+    clip: rect(0 0 0 0)
+}
+
+.img-rounded {
+    behavior: url(/assets/css/PIE/PIE.htc)
+}
+
+.img-circle {
+    behavior: url(/assets/css/PIE/PIE.htc)
+}
+
+.table-bordered {
+    behavior: url(/assets/css/PIE/PIE.htc)
+}
+
+select, textarea, input, code, pre {
+    behavior: url(/assets/css/PIE/PIE.htc)
+}
+
+.input-group-addon {
+    behavior: url(/assets/css/PIE/PIE.htc)
+}
+
+.btn {
+    behavior: url(/assets/css/PIE/PIE.htc)
+}
+
+.dropdown-menu {
+    behavior: url(/assets/css/PIE/PIE.htc)
+}
+
+.panel {
+    behavior: url(/assets/css/PIE/PIE.htc)
+}
+
+.well {
+    behavior: url(/assets/css/PIE/PIE.htc)
+}
+
+.nav-tabs > li > a {
+    behavior: url(/assets/css/PIE/PIE.htc)
+}
+
+.nav-pills > li > a {
+    behavior: url(/assets/css/PIE/PIE.htc)
+}
+
+.navbar {
+    behavior: url(/assets/css/PIE/PIE.htc)
+}
+
+.navbar-nav > li > a {
+    behavior: url(/assets/css/PIE/PIE.htc)
+}
+
+.navbar-toggle {
+    behavior: url(/assets/css/PIE/PIE.htc)
+}
+
+.navbar-toggle .icon-bar {
+    behavior: url(/assets/css/PIE/PIE.htc)
+}
+
+.breadcrumb {
+    behavior: url(/assets/css/PIE/PIE.htc)
+}
+
+.pagination {
+    behavior: url(/assets/css/PIE/PIE.htc)
+}
+
+.pager li > a, .pager li > span {
+    behavior: url(/assets/css/PIE/PIE.htc)
+}
+
+.modal-content {
+    behavior: url(/assets/css/PIE/PIE.htc)
+}
+
+.tooltip-inner {
+    behavior: url(/assets/css/PIE/PIE.htc)
+}
+
+.popover {
+    behavior: url(/assets/css/PIE/PIE.htc)
+}
+
+.popover-title {
+    behavior: url(/assets/css/PIE/PIE.htc)
+}
+
+.alert {
+    behavior: url(/assets/css/PIE/PIE.htc)
+}
+
+.thumbnail, .img-thumbnail {
+    behavior: url(/assets/css/PIE/PIE.htc)
+}
+
+.label {
+    behavior: url(/assets/css/PIE/PIE.htc)
+}
+
+.badge {
+    behavior: url(/assets/css/PIE/PIE.htc)
+}
+
+.progress {
+    behavior: url(/assets/css/PIE/PIE.htc)
+}
+
+.accordion-group {
+    behavior: url(/assets/css/PIE/PIE.htc)
+}
+
+.carousel-indicators li {
+    behavior: url(/assets/css/PIE/PIE.htc)
+}
+
+.con-img {
+    behavior: url(/assets/css/PIE/PIE.htc)
+}
+
+
+
