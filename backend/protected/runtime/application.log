@@ -657,3 +657,87 @@ Stack trace:
 REQUEST_URI=/backend/content/admin
 HTTP_REFERER=http://beliefandhope.com/backend/
 ---
+2014/01/23 16:53:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "min/jquery-1.10.1.min.map".' in /home/bh/public_html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/bh/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('min/jquery-1.10...')
+#1 /home/bh/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/bh/public_html/backend/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/backend/min/jquery-1.10.1.min.map
+HTTP_REFERER=http://www.beliefandhope.com/backend/content/create
+---
+2014/01/28 14:08:17 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`beliefandhope`.`Content`, CONSTRAINT `Content_ibfk_2` FOREIGN KEY (`catID`) REFERENCES `Hierarchy` (`id`) ON DELETE SET NULL ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `Content` (`isBlog`, `imgUrl`, `catID`, `title_az`, `content_az`, `title_en`, `content_en`, `title_ru`, `content_ru`, `albumID`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9).
+in /home/bh/public_html/backend/protected/controllers/ContentController.php (146)
+in /home/bh/public_html/backend/index.php (13)
+2014/01/28 14:08:17 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`beliefandhope`.`Content`, CONSTRAINT `Content_ibfk_2` FOREIGN KEY (`catID`) REFERENCES `Hierarchy` (`id`) ON DELETE SET NULL ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `Content` (`isBlog`, `imgUrl`, `catID`, `title_az`, `content_az`, `title_en`, `content_en`, `title_ru`, `content_ru`, `albumID`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9)' in /home/bh/public_html/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /home/bh/public_html/framework/db/ar/CActiveRecord.php(1080): CDbCommand->execute()
+#1 /home/bh/public_html/framework/db/ar/CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 /home/bh/public_html/backend/protected/controllers/ContentController.php(146): CActiveRecord->save()
+#3 /home/bh/public_html/framework/web/actions/CInlineAction.php(49): ContentController->actionCreate()
+#4 /home/bh/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/bh/public_html/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/bh/public_html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/bh/public_html/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/bh/public_html/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/bh/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/bh/public_html/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/bh/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/bh/public_html/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /home/bh/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('content/create')
+#14 /home/bh/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /home/bh/public_html/backend/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/backend/content/create
+HTTP_REFERER=http://beliefandhope.com/backend/content/create
+---
+2014/01/28 14:10:21 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`beliefandhope`.`Content`, CONSTRAINT `Content_ibfk_2` FOREIGN KEY (`catID`) REFERENCES `Hierarchy` (`id`) ON DELETE SET NULL ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `Content` (`isBlog`, `imgUrl`, `catID`, `title_az`, `content_az`, `title_en`, `content_en`, `title_ru`, `content_ru`, `albumID`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9).
+in /home/bh/public_html/backend/protected/controllers/ContentController.php (146)
+in /home/bh/public_html/backend/index.php (13)
+2014/01/28 14:10:21 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`beliefandhope`.`Content`, CONSTRAINT `Content_ibfk_2` FOREIGN KEY (`catID`) REFERENCES `Hierarchy` (`id`) ON DELETE SET NULL ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `Content` (`isBlog`, `imgUrl`, `catID`, `title_az`, `content_az`, `title_en`, `content_en`, `title_ru`, `content_ru`, `albumID`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9)' in /home/bh/public_html/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /home/bh/public_html/framework/db/ar/CActiveRecord.php(1080): CDbCommand->execute()
+#1 /home/bh/public_html/framework/db/ar/CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 /home/bh/public_html/backend/protected/controllers/ContentController.php(146): CActiveRecord->save()
+#3 /home/bh/public_html/framework/web/actions/CInlineAction.php(49): ContentController->actionCreate()
+#4 /home/bh/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/bh/public_html/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/bh/public_html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/bh/public_html/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/bh/public_html/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/bh/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/bh/public_html/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/bh/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/bh/public_html/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /home/bh/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('content/create')
+#14 /home/bh/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /home/bh/public_html/backend/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/backend/content/create
+HTTP_REFERER=http://beliefandhope.com/backend/content/create
+---
+2014/01/28 14:10:28 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`beliefandhope`.`Content`, CONSTRAINT `Content_ibfk_2` FOREIGN KEY (`catID`) REFERENCES `Hierarchy` (`id`) ON DELETE SET NULL ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `Content` (`isBlog`, `imgUrl`, `catID`, `title_az`, `content_az`, `title_en`, `content_en`, `title_ru`, `content_ru`, `albumID`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9).
+in /home/bh/public_html/backend/protected/controllers/ContentController.php (146)
+in /home/bh/public_html/backend/index.php (13)
+2014/01/28 14:10:28 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`beliefandhope`.`Content`, CONSTRAINT `Content_ibfk_2` FOREIGN KEY (`catID`) REFERENCES `Hierarchy` (`id`) ON DELETE SET NULL ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `Content` (`isBlog`, `imgUrl`, `catID`, `title_az`, `content_az`, `title_en`, `content_en`, `title_ru`, `content_ru`, `albumID`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9)' in /home/bh/public_html/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /home/bh/public_html/framework/db/ar/CActiveRecord.php(1080): CDbCommand->execute()
+#1 /home/bh/public_html/framework/db/ar/CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 /home/bh/public_html/backend/protected/controllers/ContentController.php(146): CActiveRecord->save()
+#3 /home/bh/public_html/framework/web/actions/CInlineAction.php(49): ContentController->actionCreate()
+#4 /home/bh/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/bh/public_html/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/bh/public_html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/bh/public_html/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/bh/public_html/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/bh/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/bh/public_html/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/bh/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/bh/public_html/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /home/bh/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('content/create')
+#14 /home/bh/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /home/bh/public_html/backend/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/backend/content/create
+HTTP_REFERER=http://beliefandhope.com/backend/content/create
+---

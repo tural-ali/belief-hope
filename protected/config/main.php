@@ -63,9 +63,9 @@ return array(
                 '<language:(az|ru|en)>/<controller:\w+>/<id:\d+>' => '<controller>/view',
                 '<slug:[\w\W]{0,}>/<timestamp:\d+>' => 'content/view',
                 '<language:(az|ru|en)>/<controller:\w+>/<action:\w+>' => '<controller>/<action>',
-                '<language:(az|ru|en)>/<token:[\w\W]{0,}>' => 'site/<token>',
-                '<language:(az|ru|en)>/' => 'site/index',
+                '<language:(az|ru|en)>/<token:[\w\W]{0,}>' => 'site/<token>',            
                 '<language:(az|ru|en)>/<controller:\w+>/<action:\w+>/*' => '<controller>/<action>',
+    		'<language:(az|ru|en)>/' => 'site/index',
             ),
         ),
 

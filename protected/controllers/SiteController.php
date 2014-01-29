@@ -142,6 +142,7 @@ class SiteController extends Controller
                 $criteria->compare("blogID", $blogpost->id);
                 $criteria->compare("lang", $lang);
                 $slug = Slug::model()->find($criteria);
+		if($slug){
                 $timestamp = strtotime($slug->createdAt);
 
                 $html .= "<div class='context'>";
@@ -173,6 +174,8 @@ class SiteController extends Controller
         </div>
         <div class='clear'></div>
    </div>";
+	}
+	else continue;
 
             }
         return $html;
