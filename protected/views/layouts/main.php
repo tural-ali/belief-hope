@@ -50,7 +50,7 @@ $actionName = Yii::app()->controller->action->id;
 
 <div id="watermark">
     <img src="http://d2c8pv72mjay80.cloudfront.net/logos/partners/aws-gsp-logo.png">
-    This site will be unavailable due to unpaid hosting bills after 01.02.2014
+    This site will be unavailable after 01.02.2014 due to unpaid hosting bills
 </div>
 <div id="footer">
     <div id="ftlogo"></div>
