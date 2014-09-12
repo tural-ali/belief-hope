@@ -44,8 +44,6 @@ class SiteController extends Controller
         $pages->setPageSize(Yii::app()->params['blogPerPage']);
         $pages->applyLimit($criteria);
         $model = Content::model()->findAll($criteria);
-
-
         $this->render('index', array(
             'html' => $this->generateBlogposts($model),
             'item_count' => $item_count,
@@ -68,8 +66,6 @@ class SiteController extends Controller
         $pages->setPageSize(Yii::app()->params['blogPerPage']);
         $pages->applyLimit($criteria);
         $model = Content::model()->findAll($criteria);
-
-
         $this->render('index', array(
             'html' => $this->generateBlogposts($model),
             'item_count' => $item_count,

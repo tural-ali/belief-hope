@@ -31,9 +31,8 @@ class Slider extends CWidget
             foreach ($results as $result) {
                 $class = ($counter == 0) ? "active" : "";
                 $html .= "
-                    <div data-href='" . $result->{"url_" . $currentLang} . "' class='item $class'>
-                        <img src='$result->imgUrl'>
-
+                    <div data-href='" . $result->{"url_" . $currentLang} . "' class='item mpslider-item $class'>
+                        <img src='/uploads/images/resize.php?src=$result->imgUrl&w=1000&zc=2&a=t'>
                         <div class='slider-con'>
                             <div class='sli-con'>
                                 <h1>" . $result->{"title_" . $currentLang} . "</h1>

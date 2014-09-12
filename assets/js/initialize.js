@@ -4,7 +4,7 @@ $(document).ready(function () {
         return false;
     });
 
-    $(".item").click(function () {
+    $(".mpslider-item").click(function () {
         window.location.href = $(this).data("href");
         return false;
     });
