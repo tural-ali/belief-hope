@@ -5,8 +5,7 @@ $(document).ready(function () {
     });
 
     $(".mpslider-item").click(function () {
-        alert($(this).data("href"));
-        window.location.href = $(this).data("href");
+        window.location.replace($(this).data("href"));
     });
 
 
