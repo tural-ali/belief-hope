@@ -19,7 +19,7 @@
 
         if (isset($imgUrl))
             if ($catID == 6 || $catID == 7 || is_null($catID))
-                echo "<img class='cover-photo portrait' src='/uploads/images/resize.php?src=$imgUrl&w=2500&zc=2&a=t'  alt=''/>";
+                echo "<img class='cover-photo portrait' src='/uploads/images/resize.php?src=$imgUrl&w=250&zc=2&a=t'  alt=''/>";
             else
                 echo "<center><img class='cover-photo landscape' src='/uploads/images/resize.php?src=$imgUrl&w=650&zc=2&a=t' alt=''/></center>";
 
