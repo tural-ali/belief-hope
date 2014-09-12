@@ -23,7 +23,7 @@ class PhotogalleryController extends Controller
             $html .= "<div class='album col-sm-6 col-md-4'>
             <a href='$url'>
             <span class='dark-background'>$title</span>
-              <img src='$coverUrl' class='img-thumbnail'>
+              <img src='/uploads/images/resize.php?src=$coverUrl&w=400&zc=2&a=t' class='img-thumbnail'>
                   </a>
               </div>";
         }
