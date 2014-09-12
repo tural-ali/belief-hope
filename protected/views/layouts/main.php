@@ -48,10 +48,7 @@ $actionName = Yii::app()->controller->action->id;
 
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=turalaliyev"></script>
 
-<div id="watermark">
-    <img src="http://d2c8pv72mjay80.cloudfront.net/logos/partners/aws-gsp-logo.png">
-    This site will be unavailable after 01.02.2014 due to unpaid hosting bills
-</div>
+
 <div id="footer">
     <div id="ftlogo"></div>
 
