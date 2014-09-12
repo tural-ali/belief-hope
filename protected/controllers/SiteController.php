@@ -166,7 +166,7 @@ class SiteController extends Controller
         <div class='pull-left'>
          </div>
 
-        <div class='con-fright'><a href='/$slug->slug'><i class='fa fa-book'></i> " . Yii::t("common", "readmore") . "</a></div>
+        <div class='con-fright'><a href='/$slug->slug/" . strtotime($slug->createdAt) . "'><i class='fa fa-book'></i> " . Yii::t("common", "readmore") . "</a></div>
         </div>
         <div class='clear'></div>
    </div>";
