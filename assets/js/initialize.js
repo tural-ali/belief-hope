@@ -6,7 +6,6 @@ $(document).ready(function () {
 
     $(".mpslider-item").click(function () {
         window.location.href = $(this).data("href");
-        return false;
     });
 
 
