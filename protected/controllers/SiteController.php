@@ -160,7 +160,7 @@ class SiteController extends Controller
     </div>
     <div class='clear'></div>
     <div>
-    <div class='con-img'><img src='$blogpost->imgUrl' alt=''/></div>
+    <div class='con-img'><img src='/uploads/images/resize.php?src=$blogpost->imgUrl&h=140&w=200&zc=2&a=t' alt=''/></div>
     <div class='con-body'>" .
                     Typography::truncate(strip_tags($blogpost->{"content_" . $lang}), 500) . "
             </div>
