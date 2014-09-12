@@ -22,7 +22,7 @@ class ContentController extends Controller
             $data = array(
                 'title' => $blogpost->{'title_' . $currentLang},
                 'content' => $blogpost->{'content_' . $currentLang},
-                "timestamp" => date('d.m.Y', $result->createdAt)
+                "timestamp" => date('d.m.Y', strtotime($result->createdAt))
             );
 
             if (!is_null($blogpost->catID)) {
